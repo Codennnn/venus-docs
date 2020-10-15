@@ -20,16 +20,29 @@ module.exports = {
       { text: '指南', link: '/docs/guide/' },
       {
         text: '文档',
-        link: '/docs/layout/',
+        link: '/docs/',
         items: [
-          { text: '开始', link: '/docs/layout/' }
+          { text: '快速上手', link: '/docs/' },
         ],
       },
       { text: 'External', link: 'https://google.com' },
     ],
     sidebar: [
-      '/',
-      '/docs/layout/',
+      {
+        title: '指南',
+        collapsable: false,
+        children: [
+          '/docs/guide/',
+          '/docs/guide/getting-started',
+        ]
+      },
+      {
+        title: '高级指引',
+        collapsable: false,
+        children: [
+          '/docs/advanced/layout',
+        ]
+      },
     ],
   },
 
