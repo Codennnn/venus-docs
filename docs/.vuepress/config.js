@@ -2,11 +2,8 @@ module.exports = {
   evergreen: true,
   theme: require.resolve('../../vuepress-theme-sonic/'),
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo/logo-dark.svg', media: '(prefers-color-scheme:light)' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo/logo-light.svg', media: '(prefers-color-scheme:dark)' }],
-    ['link', { rel: 'alternate icon', href: '/logo/logo-dark.ico', media: '(prefers-color-scheme:light)' }],
-    ['link', { rel: 'alternate icon', href: '/logo/logo-light.ico', media: '(prefers-color-scheme:dark)' }],
-    ['link', { rel: 'mask-icon', href: '/logo/logo-dark.svg', color: '#515151' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo/logo-dark.svg' }],
+    ['link', { rel: 'alternate icon', type: 'image/x-icon', href: '/logo/logo-dark.ico' }],
   ],
 
   locales: {
