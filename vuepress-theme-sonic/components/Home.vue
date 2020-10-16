@@ -18,13 +18,16 @@
           {{ data.tagline || $description || 'Welcome to your VuePress site' }}
         </p>
 
-        <p
-          v-if="data.actionText && data.actionLink"
-          class="action"
-        >
+        <p class="action">
           <NavLink
-            class="action-button"
-            :item="actionLink"
+            v-if="data.startActionText && data.startActionLink"
+            class="action-button start"
+            :item="startAction"
+          />
+          <NavLink
+            v-if="data.demoActionText && data.demoActionLink"
+            class="action-button demo"
+            :item="demoAction"
           />
         </p>
       </div>
@@ -69,12 +72,19 @@ export default {
       return this.$page.frontmatter
     },
 
-    actionLink () {
+    startAction () {
       return {
-        link: this.data.actionLink,
-        text: this.data.actionText
+        link: this.data.startActionLink,
+        text: this.data.startActionText,
       }
-    }
+    },
+
+    demoAction () {
+      return {
+        link: this.data.demoActionLink,
+        text: this.data.demoActionText,
+      }
+    },
   }
 }
 </script>
@@ -107,14 +117,24 @@ export default {
     .action-button
       display inline-block
       padding 0.6rem 2rem
-      color #6d580c
-      background-color #ffda5b
       border-radius 0.5rem
       transition background-color 0.3s
       box-sizing border-box
 
-      &:hover
-        background-color lighten(#ffda5b, 30%)
+      &.start
+        margin-right 0.8rem
+        color #fff
+        background-color $accentColor
+
+        &:hover
+          background-color lighten($accentColor, 30%)
+
+      &.demo
+        color #6d580c
+        background-color #ffda5b
+
+        &:hover
+          background-color lighten(#ffda5b, 30%)
 
   .features
     border-top 1px solid $borderColor

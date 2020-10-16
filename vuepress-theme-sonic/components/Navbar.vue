@@ -35,15 +35,6 @@
         :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-
-      <a
-        href="https://chinesee.gitee.io/magic-frest-live-demo"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="live-demo"
-      >
-        在线体验
-      </a>
     </div>
   </header>
 </template>

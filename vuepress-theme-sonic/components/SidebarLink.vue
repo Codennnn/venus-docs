@@ -107,27 +107,47 @@ function renderExternal (h, to, text) {
   font-size 0.95em
 
 a.sidebar-link
+  position relative
+  width 100%
+  line-height 1.4
+  padding 0.35rem 1rem 0.35rem 1.25rem
+  display inline-block
+  color #bbc1c7
   font-size 1em
   font-weight 400
-  display inline-block
-  color $textColor
-  border-left 0.25rem solid transparent
-  padding 0.35rem 1rem 0.35rem 1.25rem
-  line-height 1.4
-  width: 100%
-  box-sizing: border-box
+  box-sizing border-box
+  transition all 0.3s
+
+  &::before
+    content ''
+    position absolute
+    top 50%
+    left 0
+    transform translateY(-50%)
+    width 5px
+    height 0
+    transition all 0.2s
+    border-radius 0 5px 5px 0
+    background $textColor
+
   &:hover
-    color $accentColor
+    color $textColor
+
   &.active
     font-weight 600
-    color $accentColor
-    border-left-color $accentColor
+    color $textColor
+
+    &::before
+      height 30px
+
   .sidebar-group &
     padding-left 2rem
+
   .sidebar-sub-headers &
     padding-top 0.25rem
     padding-bottom 0.25rem
     border-left none
+
     &.active
       font-weight 500
 </style>

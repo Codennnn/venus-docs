@@ -16,6 +16,7 @@ module.exports = {
 
   themeConfig: {
     logo: '/logo/logo-dark.svg',
+    lastUpdated: true,
     nav: [
       {
         text: '文档',
