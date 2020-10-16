@@ -4,6 +4,9 @@
     "build": "vuepress build docs"
   },
   "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
     "vuepress": "^1.7.0"
-  }
+  },
+  "dependencies": {}
 }
