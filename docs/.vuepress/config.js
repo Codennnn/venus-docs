@@ -17,30 +17,45 @@ module.exports = {
   themeConfig: {
     logo: '/logo/logo-dark.svg',
     nav: [
-      { text: '指南', link: '/docs/guide/' },
       {
         text: '文档',
-        link: '/docs/',
+        link: '/docs/guide/',
         items: [
-          { text: '快速上手', link: '/docs/' },
+          { text: '快速上手', link: '/docs/guide/' },
         ],
       },
-      { text: 'External', link: 'https://google.com' },
+      { text: '帮助', link: '/' },
+      { text: '关于作者', link: 'https://chinesee.gitee.io/blog-nuxt/' },
     ],
     sidebar: [
       {
-        title: '指南',
+        title: '入门',
         collapsable: false,
         children: [
           '/docs/guide/',
           '/docs/guide/getting-started',
+          '/docs/guide/faq',
         ]
       },
       {
-        title: '高级指引',
+        title: '开发',
         collapsable: false,
         children: [
           '/docs/advanced/layout',
+        ]
+      },
+      {
+        title: '构建和部署',
+        collapsable: false,
+        children: [
+          '/docs/build/environment-variables',
+        ]
+      },
+      {
+        title: '其他',
+        collapsable: false,
+        children: [
+          '/docs/other/resource',
         ]
       },
     ],

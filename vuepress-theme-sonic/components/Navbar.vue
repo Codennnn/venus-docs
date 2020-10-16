@@ -141,7 +141,7 @@ function css (el, property) {
 
   .external-links-search
     position absolute
-    right 0
+    right 1.5rem
     display flex
     align-items center
     justify-content center
