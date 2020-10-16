@@ -124,31 +124,37 @@ export default {
 
 <style lang="stylus">
 .nav-links
-  display inline-block
+  display flex
+  align-items center
+  justify-content center
+  color #a0a5b9
+
   a
-    line-height 1.4rem
     color inherit
+
     &:hover, &.router-link-active
       color $accentColor
+
   .nav-item
     position relative
-    display inline-block
-    margin-left 1.5rem
-    line-height 2rem
+    padding 0 1.2rem
+
     &:first-child
       margin-left 0
+
   .repo-link
     margin-left 1.5rem
 
-@media (max-width: $MQMobile)
+@media (max-width $MQMobile)
   .nav-links
     .nav-item, .repo-link
       margin-left 0
 
-@media (min-width: $MQMobile)
+@media (min-width $MQMobile)
   .nav-links a
     &:hover, &.router-link-active
       color $textColor
+
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       margin-bottom -2px

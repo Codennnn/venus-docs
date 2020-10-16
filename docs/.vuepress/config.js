@@ -10,7 +10,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'Sonic',
-      description: 'Vue 驱动的静态网站生成器',
+      description: '由 Vue.js 构建的管理平台开发模板',
     },
   },
 

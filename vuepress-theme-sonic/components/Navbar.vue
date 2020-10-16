@@ -26,12 +26,24 @@
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
     >
+      <NavLinks class="can-hide" />
+    </div>
+
+    <div class="external-links-search">
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <NavLinks class="can-hide" />
+
+      <a
+        href="https://chinesee.gitee.io/magic-frest-live-demo"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="live-demo"
+      >
+        在线体验
+      </a>
     </div>
   </header>
 </template>
@@ -93,11 +105,11 @@ function css (el, property) {
 </script>
 
 <style lang="stylus">
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 1.5rem
-
 .navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
+  padding 0 1.2rem
+  display flex
+  align-items center
+  justify-content center
   line-height $navbarHeight - 1.4rem
 
   a, span, img
@@ -109,6 +121,12 @@ $navbar-horizontal-padding = 1.5rem
     margin-right 0.8rem
     vertical-align top
 
+  .home-link
+    position absolute
+    left 0px
+    font-weight bold
+    padding-left 30px
+
   .site-name
     font-size 1.3rem
     font-weight 600
@@ -116,19 +134,36 @@ $navbar-horizontal-padding = 1.5rem
     position relative
 
   .links
-    padding-left 1.5rem
-    box-sizing border-box
-    background-color white
+    position relative
+    display flex
     white-space nowrap
     font-size 0.9rem
+
+  .external-links-search
     position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
+    right 0
     display flex
+    align-items center
+    justify-content center
 
     .search-box
       flex 0 0 auto
       vertical-align top
+
+    .live-demo
+      padding 0 1rem
+      background linear-gradient(180deg, lighten($accentColor, 20%), lighten($accentColor, 10%))
+      color #fff
+      border-radius 0.4rem
+
+@media (max-width 1400px)
+  .navbar
+    justify-content flex-start
+
+    .home-link
+      position relative
+      padding-left 0px
+      padding-right 20px
 
 @media (max-width $MQMobile)
   .navbar
