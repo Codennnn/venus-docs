@@ -55,23 +55,23 @@ export default {
     AlgoliaSearchBox
   },
 
-  data () {
+  data() {
     return {
       linksWrapMaxWidth: null
     }
   },
 
   computed: {
-    algolia () {
+    algolia() {
       return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
     },
 
-    isAlgoliaSearch () {
+    isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
     }
   },
 
-  mounted () {
+  mounted() {
     const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
     const NAVBAR_VERTICAL_PADDING = parseInt(css(this.$el, 'paddingLeft')) + parseInt(css(this.$el, 'paddingRight'))
     const handleLinksWrapWidth = () => {
@@ -87,7 +87,7 @@ export default {
   }
 }
 
-function css (el, property) {
+function css(el, property) {
   // NOTE: Known bug, will return 'auto' if style value is 'auto'
   const win = el.ownerDocument.defaultView
   // null means not to return pseudo styles

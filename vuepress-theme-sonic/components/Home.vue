@@ -7,9 +7,9 @@
       <div>
         <h1
           v-if="data.heroText !== null"
-          v-html="data.heroText"
           class="main-title"
-        ></h1>
+          v-html="data.heroText"
+        />
 
         <p
           v-if="data.tagline !== null"
@@ -32,7 +32,7 @@
         </p>
       </div>
 
-      <div></div>
+      <div />
     </div>
 
     <div
@@ -68,24 +68,24 @@ export default {
   components: { NavLink },
 
   computed: {
-    data () {
+    data() {
       return this.$page.frontmatter
     },
 
-    startAction () {
+    startAction() {
       return {
         link: this.data.startActionLink,
         text: this.data.startActionText,
       }
     },
 
-    demoAction () {
+    demoAction() {
       return {
         link: this.data.demoActionLink,
         text: this.data.demoActionText,
       }
     },
-  }
+  },
 }
 </script>
 
