@@ -16,7 +16,7 @@ module.exports = {
 
   themeConfig: {
     logo: '/logo/logo-dark.svg',
-    lastUpdated: true,
+    lastUpdated: '最近更新',
     nav: [
       {
         text: '文档',
@@ -36,28 +36,28 @@ module.exports = {
           '/docs/guide/',
           '/docs/guide/getting-started',
           '/docs/guide/faq',
-        ]
+        ],
       },
       {
         title: '开发',
         collapsable: false,
         children: [
           '/docs/advanced/layout',
-        ]
+        ],
       },
       {
         title: '构建和部署',
         collapsable: false,
         children: [
           '/docs/build/environment-variables',
-        ]
+        ],
       },
       {
         title: '其他',
         collapsable: false,
         children: [
           '/docs/other/resource',
-        ]
+        ],
       },
     ],
   },
@@ -66,5 +66,5 @@ module.exports = {
     if (!isServer) {
       // 修改客户端的 webpack 配置
     }
-  }
+  },
 }

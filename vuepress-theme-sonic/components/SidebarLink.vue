@@ -6,19 +6,19 @@ export default {
 
   props: ['item', 'sidebarDepth'],
 
-  render (h,
+  render(h,
     {
       parent: {
         $page,
         $site,
         $route,
         $themeConfig,
-        $themeLocaleConfig
+        $themeLocaleConfig,
       },
       props: {
         item,
-        sidebarDepth
-      }
+        sidebarDepth,
+      },
     }) {
     // use custom active class matching logic
     // due to edge case of paths ending with / + hash
@@ -37,7 +37,7 @@ export default {
       sidebarDepth,
       $themeLocaleConfig.sidebarDepth,
       $themeConfig.sidebarDepth,
-      1
+      1,
     ].find(depth => depth !== undefined)
 
     const displayAllHeaders = $themeLocaleConfig.displayAllHeaders
@@ -51,52 +51,52 @@ export default {
     } else {
       return link
     }
-  }
+  },
 }
 
-function renderLink (h, to, text, active, level) {
+function renderLink(h, to, text, active, level) {
   const component = {
     props: {
       to,
       activeClass: '',
-      exactActiveClass: ''
+      exactActiveClass: '',
     },
     class: {
       active,
-      'sidebar-link': true
-    }
+      'sidebar-link': true,
+    },
   }
 
   if (level > 2) {
     component.style = {
-      'padding-left': level + 'rem'
+      'padding-left': level + 'rem',
     }
   }
 
   return h('RouterLink', component, text)
 }
 
-function renderChildren (h, children, path, route, maxDepth, depth = 1) {
+function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h('ul', { class: 'sidebar-sub-headers' }, children.map(c => {
     const active = isActive(route, path + '#' + c.slug)
     return h('li', { class: 'sidebar-sub-header' }, [
       renderLink(h, path + '#' + c.slug, c.title, active, c.level - 1),
-      renderChildren(h, c.children, path, route, maxDepth, depth + 1)
+      renderChildren(h, c.children, path, route, maxDepth, depth + 1),
     ])
   }))
 }
 
-function renderExternal (h, to, text) {
+function renderExternal(h, to, text) {
   return h('a', {
     attrs: {
       href: to,
       target: '_blank',
-      rel: 'noopener noreferrer'
+      rel: 'noopener noreferrer',
     },
     class: {
-      'sidebar-link': true
-    }
+      'sidebar-link': true,
+    },
   }, [text, h('OutboundLink')])
 }
 </script>
@@ -134,7 +134,7 @@ a.sidebar-link
     color $textColor
 
   &.active
-    font-weight 600
+    font-weight 500
     color $textColor
 
     &::before
