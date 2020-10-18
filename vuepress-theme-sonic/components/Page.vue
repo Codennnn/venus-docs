@@ -27,4 +27,8 @@ export default {
 .page
   padding-bottom 2rem
   display block
+
+  .theme-default-content
+    p
+      text-align justify
 </style>
