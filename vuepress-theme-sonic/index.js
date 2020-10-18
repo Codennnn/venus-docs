@@ -19,7 +19,7 @@ module.exports = (options, ctx) => {
       return {
         '@AlgoliaSearchBox': isAlgoliaSearch
           ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')
-          : path.resolve(__dirname, 'noopModule.js')
+          : path.resolve(__dirname, 'noopModule.js'),
       }
     },
 
@@ -32,29 +32,29 @@ module.exports = (options, ctx) => {
         type: 'tip',
         defaultTitle: {
           '/': 'TIP',
-          '/zh/': '提示'
-        }
+          '/zh/': '提示',
+        },
       }],
       ['container', {
         type: 'warning',
         defaultTitle: {
           '/': 'WARNING',
-          '/zh/': '注意'
-        }
+          '/zh/': '注意',
+        },
       }],
       ['container', {
         type: 'danger',
         defaultTitle: {
           '/': 'WARNING',
-          '/zh/': '警告'
-        }
+          '/zh/': '警告',
+        },
       }],
       ['container', {
         type: 'details',
         before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
-        after: () => '</details>\n'
+        after: () => '</details>\n',
       }],
-      ['smooth-scroll', enableSmoothScroll]
-    ]
+      ['smooth-scroll', enableSmoothScroll],
+    ],
   }
 }

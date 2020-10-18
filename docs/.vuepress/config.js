@@ -20,9 +20,9 @@ module.exports = {
     nav: [
       {
         text: '文档',
-        link: '/docs/guide/',
+        link: '/docs/base/',
         items: [
-          { text: '快速上手', link: '/docs/guide/' },
+          { text: '快速上手', link: '/docs/base/' },
         ],
       },
       { text: '帮助', link: '/' },
@@ -33,23 +33,26 @@ module.exports = {
         title: '入门',
         collapsable: false,
         children: [
-          '/docs/guide/',
-          '/docs/guide/getting-started',
-          '/docs/guide/faq',
+          '/docs/base/',
+          '/docs/base/getting-started',
+          '/docs/base/executable-script',
+          '/docs/base/change-log',
         ],
       },
       {
         title: '开发',
         collapsable: false,
         children: [
-          '/docs/advanced/layout',
+          '/docs/dev/layout',
+          '/docs/dev/router-and-nav',
         ],
       },
       {
-        title: '构建和部署',
+        title: '进阶',
         collapsable: false,
         children: [
-          '/docs/build/environment-variables',
+          '/docs/advanced/environment-variables',
+          '/docs/advanced/mock-api',
         ],
       },
       {
@@ -57,6 +60,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/docs/other/resource',
+          '/docs/other/faq',
         ],
       },
     ],
