@@ -2,8 +2,7 @@ module.exports = {
   evergreen: true,
   theme: require.resolve('../../vuepress-theme-sonic/'),
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo/logo-dark.svg' }],
-    ['link', { rel: 'alternate icon', type: 'image/x-icon', href: '/logo/logo-dark.ico' }],
+    ['link', { rel: 'icon', href: '/logo/logo-icon.png' }],
   ],
 
   locales: {
@@ -15,7 +14,8 @@ module.exports = {
   },
 
   themeConfig: {
-    logo: '/logo/logo-dark.svg',
+    logo: '/logo/logo.png',
+    repo: 'https://github.com/Chinesee/magic-sonic-docs',
     lastUpdated: '最近更新',
     nav: [
       {

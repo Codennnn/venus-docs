@@ -17,7 +17,7 @@ import PageNav from '@theme/components/PageNav.vue'
 
 export default {
   components: { PageEdit, PageNav },
-  props: ['sidebarItems']
+  props: ['sidebarItems'],
 }
 </script>
 
@@ -27,5 +27,4 @@ export default {
 .page
   padding-bottom 2rem
   display block
-
 </style>

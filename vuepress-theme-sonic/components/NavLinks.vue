@@ -28,7 +28,6 @@
       rel="noopener noreferrer"
     >
       {{ repoLabel }}
-      <OutboundLink />
     </a>
   </nav>
 </template>
@@ -43,15 +42,15 @@ export default {
 
   components: {
     NavLink,
-    DropdownLink
+    DropdownLink,
   },
 
   computed: {
-    userNav () {
+    userNav() {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
     },
 
-    nav () {
+    nav() {
       const { locales } = this.$site
       if (locales && Object.keys(locales).length > 1) {
         const currentLink = this.$page.path
@@ -76,22 +75,22 @@ export default {
               }
             }
             return { text, link }
-          })
+          }),
         }
         return [...this.userNav, languageDropdown]
       }
       return this.userNav
     },
 
-    userLinks () {
+    userLinks() {
       return (this.nav || []).map(link => {
         return Object.assign(resolveNavLinkItem(link), {
-          items: (link.items || []).map(resolveNavLinkItem)
+          items: (link.items || []).map(resolveNavLinkItem),
         })
       })
     },
 
-    repoLink () {
+    repoLink() {
       const { repo } = this.$site.themeConfig
       if (repo) {
         return /^https?:/.test(repo)
@@ -101,14 +100,14 @@ export default {
       return null
     },
 
-    repoLabel () {
+    repoLabel() {
       if (!this.repoLink) return
       if (this.$site.themeConfig.repoLabel) {
         return this.$site.themeConfig.repoLabel
       }
 
       const repoHost = this.repoLink.match(/^https?:\/\/[^/]+/)[0]
-      const platforms = ['GitHub', 'GitLab', 'Bitbucket']
+      const platforms = ['GitHub', 'GitLab', 'Gitee', 'Bitbucket']
       for (let i = 0; i < platforms.length; i++) {
         const platform = platforms[i]
         if (new RegExp(platform, 'i').test(repoHost)) {
@@ -117,8 +116,8 @@ export default {
       }
 
       return 'Source'
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -131,6 +130,7 @@ export default {
 
   a
     color inherit
+    transition all 0.3s
 
     &:hover, &.router-link-active
       color $accentColor
@@ -143,7 +143,7 @@ export default {
       margin-left 0
 
   .repo-link
-    margin-left 1.5rem
+    padding 0 1.2rem
 
 @media (max-width $MQMobile)
   .nav-links
