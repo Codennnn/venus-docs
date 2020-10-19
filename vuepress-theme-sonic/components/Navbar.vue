@@ -52,12 +52,12 @@ export default {
     SidebarButton,
     NavLinks,
     SearchBox,
-    AlgoliaSearchBox
+    AlgoliaSearchBox,
   },
 
   data() {
     return {
-      linksWrapMaxWidth: null
+      linksWrapMaxWidth: null,
     }
   },
 
@@ -68,7 +68,7 @@ export default {
 
     isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
-    }
+    },
   },
 
   mounted() {
@@ -84,7 +84,7 @@ export default {
     }
     handleLinksWrapWidth()
     window.addEventListener('resize', handleLinksWrapWidth, false)
-  }
+  },
 }
 
 function css(el, property) {
@@ -115,8 +115,9 @@ function css(el, property) {
   .home-link
     position absolute
     left 0px
+    margin-right 40px
+    padding-left 10px
     font-weight bold
-    padding-left 30px
 
   .site-name
     font-size 1.3rem

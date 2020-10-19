@@ -4,11 +4,13 @@
     :class="{ open }"
   >
     <a
-      class="dropdown-title"
+      class="dropdown-title nav-link"
+      :class="{ 'router-link-active' : isActive }"
+      :href="item.link"
       @click="handleDropdown"
     >
       <span class="title">{{ item.text }}</span>
-      <!-- <span class="arrow down" /> -->
+      <i class="bx bx-chevron-down"></i>
     </a>
     <a
       class="mobile-dropdown-title"
@@ -76,39 +78,45 @@ export default {
 
   components: {
     NavLink,
-    DropdownTransition
+    DropdownTransition,
   },
 
   props: {
     item: {
-      required: true
-    }
+      required: true,
+    },
   },
 
-  data () {
+  data() {
     return {
-      open: false
+      open: false,
     }
   },
 
   computed: {
-    dropdownAriaLabel () {
+    isActive() {
+      const basePath = this.$route.path.split('/')[1]
+      const linkBasePath = this.item.link.split('/')[1]
+      return basePath === linkBasePath
+    },
+
+    dropdownAriaLabel() {
       return this.item.ariaLabel || this.item.text
-    }
+    },
   },
 
   watch: {
-    $route () {
+    $route() {
       this.open = false
-    }
+    },
   },
 
   methods: {
-    setOpen (value) {
+    setOpen(value) {
       this.open = value
     },
 
-    isLastItemOfArray (item, array) {
+    isLastItemOfArray(item, array) {
       return last(array) === item
     },
 
@@ -118,11 +126,11 @@ export default {
      * Use event.detail to detect tab and click from keyboard. Ref: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
      * The Tab + Click is UIEvent > KeyboardEvent, so the detail is 0.
      */
-    handleDropdown () {
+    handleDropdown() {
       const isTriggerByTab = event.detail === 0
       if (isTriggerByTab) this.setOpen(!this.open)
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -135,10 +143,6 @@ export default {
     justify-content center
     font-weight 500
     cursor pointer
-    color $textColor
-
-    &:hover
-      border-color transparent
 
   .mobile-dropdown-title
     @extend .dropdown-title
@@ -156,7 +160,7 @@ export default {
 
       h4
         margin 0.45rem 0 0
-        border-top 1px solid #eee
+        // border-top 1px solid #eee
         padding 1rem 1.5rem 0.45rem 1.25rem
 
       .dropdown-subitem-wrapper
@@ -183,14 +187,13 @@ export default {
 
           &::after
             content ''
-            width 0
-            height 0
-            border-left 5px solid $accentColor
-            border-top 3px solid transparent
-            border-bottom 3px solid transparent
             position absolute
             top calc(50% - 2px)
             left 9px
+            width 5px
+            height 5px
+            border-radius 50%
+            background-color $accentColor
 
       &:first-child h4
         margin-top 0
@@ -232,27 +235,39 @@ export default {
 
     &:hover .nav-dropdown, &.open .nav-dropdown
       // override the inline style.
-      display block !important
+      // display block !important
+      transform translate(0, calc(100% + 10px)) !important
+      visibility visible !important
+      opacity 1 !important
 
     &.open:blur
       display none
 
     .nav-dropdown
-      display none
+      min-width 200px
+      display block !important
+      visibility hidden
+      opacity 0
+      // display none
       // Avoid height shaked by clicking
       height auto !important
       box-sizing border-box
       max-height calc(100vh - 2.7rem)
       overflow-y auto
       position absolute
-      top 100%
-      right 0
+      // top 100%
+      // right 0
+      left 0
+      bottom 0
+      transform translate(0, 100%)
       background-color #fff
       padding 0.6rem 0
-      border 1px solid #ddd
-      border-bottom-color #ccc
+      // border 1px solid #ddd
+      // border-bottom-color #ccc
       text-align left
-      border-radius 0.25rem
+      border-radius 0.4rem 0.6rem 0.6rem 0.6rem
       white-space nowrap
       margin 0
+      transition all 0.25s ease
+      box-shadow 0px 10px 20px -10px rgba(0, 0, 0, 0.2)
 </style>

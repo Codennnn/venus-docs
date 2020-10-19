@@ -40,10 +40,7 @@ import NavLink from '@theme/components/NavLink.vue'
 export default {
   name: 'NavLinks',
 
-  components: {
-    NavLink,
-    DropdownLink,
-  },
+  components: { NavLink, DropdownLink },
 
   computed: {
     userNav() {
@@ -130,7 +127,7 @@ export default {
 
   a
     color inherit
-    transition all 0.3s
+    transition all 0.25s
 
     &:hover, &.router-link-active
       color $accentColor
@@ -158,5 +155,4 @@ export default {
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
       margin-bottom -2px
-      border-bottom 2px solid lighten($accentColor, 8%)
 </style>

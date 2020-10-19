@@ -30,11 +30,11 @@ export default {
   name: 'PageEdit',
 
   computed: {
-    lastUpdated () {
+    lastUpdated() {
       return this.$page.lastUpdated
     },
 
-    lastUpdatedText () {
+    lastUpdatedText() {
       if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
         return this.$themeLocaleConfig.lastUpdated
       }
@@ -44,7 +44,7 @@ export default {
       return 'Last Updated'
     },
 
-    editLink () {
+    editLink() {
       const showEditLink = isNil(this.$page.frontmatter.editLink)
         ? this.$site.themeConfig.editLinks
         : this.$page.frontmatter.editLink
@@ -53,7 +53,7 @@ export default {
         repo,
         docsDir = '',
         docsBranch = 'master',
-        docsRepo = repo
+        docsRepo = repo,
       } = this.$site.themeConfig
 
       if (showEditLink && docsRepo && this.$page.relativePath) {
@@ -62,29 +62,29 @@ export default {
           docsRepo,
           docsDir,
           docsBranch,
-          this.$page.relativePath
+          this.$page.relativePath,
         )
       }
       return null
     },
 
-    editLinkText () {
+    editLinkText() {
       return (
         this.$themeLocaleConfig.editLinkText
         || this.$site.themeConfig.editLinkText
-        || `Edit this page`
+        || 'Edit this page'
       )
-    }
+    },
   },
 
   methods: {
-    createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
+    createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/
       if (bitbucket.test(docsRepo)) {
         const base = docsRepo
         return (
           base.replace(endingSlashRE, '')
-          + `/src`
+          + '/src'
           + `/${docsBranch}/`
           + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
           + path
@@ -97,7 +97,7 @@ export default {
         const base = docsRepo
         return (
           base.replace(endingSlashRE, '')
-          + `/-/edit`
+          + '/-/edit'
           + `/${docsBranch}/`
           + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
           + path
@@ -114,8 +114,8 @@ export default {
         + (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '')
         + path
       )
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -130,26 +130,30 @@ export default {
 
   .edit-link
     display inline-block
+
     a
       color lighten($textColor, 25%)
       margin-right 0.25rem
+
   .last-updated
     float right
     font-size 0.9em
+
     .prefix
       font-weight 500
       color lighten($textColor, 25%)
+
     .time
       font-weight 400
       color #767676
 
-@media (max-width: $MQMobile)
+@media (max-width $MQMobile)
   .page-edit
     .edit-link
       margin-bottom 0.5rem
+
     .last-updated
       font-size 0.8em
       float none
       text-align left
-
 </style>

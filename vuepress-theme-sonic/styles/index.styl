@@ -21,6 +21,18 @@ body
 ::selection
   background lighten($accentColor, 80%)
 
+::-webkit-scrollbar
+  width 8px !important
+  height 8px !important
+  background-color transparent !important
+
+::-webkit-scrollbar-thumb
+  border-radius 10px !important
+  background-color #F1F1F1 !important
+
+::-webkit-scrollbar-track-piece
+  background-color #FFF !important
+
 .page
   padding-left $sidebarWidth
 
@@ -137,7 +149,6 @@ h1
 h2
   font-size 1.65rem
   padding-bottom 0.3rem
-  border-bottom 1px solid $borderColor
 
 h3
   font-size 1.35rem
@@ -149,9 +160,10 @@ a.header-anchor
   padding-right 0.23em
   margin-top 0.125em
   opacity 0
+  transition opacity 0.2s
 
   &:hover
-    text-decoration none
+    text-decoration none !important
 
 code, kbd, .line-number
   font-family source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace

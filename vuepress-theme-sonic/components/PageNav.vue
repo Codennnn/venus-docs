@@ -8,7 +8,7 @@
         v-if="prev"
         class="prev"
       >
-        ←
+        <i class="bx bx-left-arrow-alt arrow-icon"></i>
         <a
           v-if="prev.type === 'external'"
           class="prev"
@@ -51,7 +51,7 @@
         >
           {{ next.title || next.path }}
         </RouterLink>
-        →
+        <i class="bx bx-right-arrow-alt arrow-icon"></i>
       </span>
     </p>
   </div>
@@ -68,21 +68,21 @@ export default {
   props: ['sidebarItems'],
 
   computed: {
-    prev () {
+    prev() {
       return resolvePageLink(LINK_TYPES.PREV, this)
     },
 
-    next () {
+    next() {
       return resolvePageLink(LINK_TYPES.NEXT, this)
-    }
-  }
+    },
+  },
 }
 
-function resolvePrev (page, items) {
+function resolvePrev(page, items) {
   return find(page, items, -1)
 }
 
-function resolveNext (page, items) {
+function resolveNext(page, items) {
   return find(page, items, 1)
 }
 
@@ -90,18 +90,18 @@ const LINK_TYPES = {
   NEXT: {
     resolveLink: resolveNext,
     getThemeLinkConfig: ({ nextLinks }) => nextLinks,
-    getPageLinkConfig: ({ frontmatter }) => frontmatter.next
+    getPageLinkConfig: ({ frontmatter }) => frontmatter.next,
   },
   PREV: {
     resolveLink: resolvePrev,
     getThemeLinkConfig: ({ prevLinks }) => prevLinks,
-    getPageLinkConfig: ({ frontmatter }) => frontmatter.prev
-  }
+    getPageLinkConfig: ({ frontmatter }) => frontmatter.prev,
+  },
 }
 
-function resolvePageLink (
+function resolvePageLink(
   linkType,
-  { $themeConfig, $page, $route, $site, sidebarItems }
+  { $themeConfig, $page, $route, $site, sidebarItems },
 ) {
   const { resolveLink, getThemeLinkConfig, getPageLinkConfig } = linkType
 
@@ -123,7 +123,7 @@ function resolvePageLink (
   }
 }
 
-function find (page, items, offset) {
+function find(page, items, offset) {
   const res = []
   flatten(items, res)
   for (let i = 0; i < res.length; i++) {
@@ -134,7 +134,7 @@ function find (page, items, offset) {
   }
 }
 
-function flatten (items, res) {
+function flatten(items, res) {
   for (let i = 0, l = items.length; i < l; i++) {
     if (items[i].type === 'group') {
       flatten(items[i].children || [], res)
@@ -152,12 +152,26 @@ function flatten (items, res) {
   @extend $wrapper
   padding-top 1rem
   padding-bottom 0
+
   .inner
     min-height 2rem
     margin-top 0
-    border-top 1px solid $borderColor
     padding-top 1rem
-    overflow auto // clear float
+    display flex
+    align-items center
+    border-top 1px solid $borderColor
+
+    .arrow-icon
+      font-size 1.4rem
+      color $accentColor
+
+  .prev, .next
+    display flex
+    align-items center
+
+  .prev
+    margin-right auto
+
   .next
-    float right
+    margin-left auto
 </style>

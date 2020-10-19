@@ -1,27 +1,21 @@
 <template>
-  <aside class="sidebar">
-    <NavLinks />
-
-    <slot name="top" />
-
-    <SidebarLinks
-      :depth="0"
-      :items="items"
-    />
-    <slot name="bottom" />
+  <aside class="side-nav">
+    <ul>
+      <li
+        v-for="item in $page.headers"
+        :key="item.title"
+      >
+        {{ item.title }}
+      </li>
+    </ul>
   </aside>
 </template>
 
 <script>
-import SidebarLinks from '@theme/components/SidebarLinks.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
-
 export default {
-  name: 'Sidebar',
+  name: 'SideNav',
 
-  components: { SidebarLinks, NavLinks },
-
-  props: ['items'],
+  props: ['items', 'fixed'],
 }
 </script>
 
@@ -50,7 +44,7 @@ export default {
       padding 0.5rem 0 0.5rem 1.5rem
 
   & > .sidebar-links
-    padding 3rem 0
+    padding 1.5rem 0
 
     & > li > a.sidebar-link
       font-size 1.1em
