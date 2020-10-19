@@ -16,25 +16,33 @@
 
 将项目下载到本地后，你应该能看到以下的目录结构。
 ```
-├── config                   # umi 配置，包含路由，构建等配置
-├── mock                     # 本地模拟数据
+├── __tests__                 # jest 测试用例
 ├── public
-│   └── favicon.png          # Favicon
+│   ├── favicon.ico           # 网页标题图标
+│   └── index.html            # 网页的入口文件
 ├── src
-│   ├── assets               # 本地静态资源
-│   ├── components           # 业务通用组件
-│   ├── e2e                  # 集成测试用例
-│   ├── layouts              # 通用布局
-│   ├── models               # 全局 dva model
-│   ├── pages                # 业务页面入口和常用模板
-│   ├── services             # 后台接口服务
-│   ├── utils                # 工具库
-│   ├── locales              # 国际化资源
-│   ├── global.less          # 全局样式
-│   └── global.ts            # 全局 JS
-├── tests                    # 测试工具
+│   ├── api                   # 数据接口
+│   ├── assets                # 多媒体资源
+│   ├── components            # 业务通用组件
+│   ├── directives            # Vue 自定义指令
+│   ├── layouts               # 通用布局
+│   ├── mock                  # 模拟数据
+│   ├── plugins               # 第三方插件
+│   ├── router                # 路由配置
+│   ├── store                 # 数据仓库
+│   ├── utils                 # 工具函数
+│   ├── views                 # 页面视图
+│   ├── App.vue               # 主组件，用于挂载其他视图
+│   └── main.js               # 全局 JS
+├── .env                      # 环境变量
+├── .env.development          # 环境变量（开发环境）
+├── .eslintrc.js              # eslint 配置
+├── babel.config.js           # babel 配置
+├── jest.config.js            # jest 配置
+├── package.json                    
 ├── README.md
-└── package.json
+├── tailwind.config.js        # tailwind 配置
+└── vue.config.js             # vue-cli 配置
 ```
 
 ### 运行项目
