@@ -64,6 +64,10 @@ module.exports = {
         ],
       },
     ],
+    // algolia: {
+    //   apiKey: '<API_KEY>',
+    //   indexName: '<INDEX_NAME>'
+    // }
   },
 
   configureWebpack: (config, isServer) => {
