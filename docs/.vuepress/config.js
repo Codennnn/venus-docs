@@ -36,7 +36,6 @@ module.exports = {
           '/docs/base/',
           '/docs/base/getting-started',
           '/docs/base/executable-script',
-          '/docs/base/change-log',
         ],
       },
       {
@@ -61,6 +60,7 @@ module.exports = {
         children: [
           '/docs/other/resource',
           '/docs/other/faq',
+          '/docs/other/change-log',
         ],
       },
     ],
