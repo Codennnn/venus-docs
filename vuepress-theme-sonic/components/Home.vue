@@ -32,7 +32,13 @@
         </p>
       </div>
 
-      <div />
+      <div class="banner">
+        <img
+          class="banner-img"
+          src="/banner.png"
+          alt="banner"
+        >
+      </div>
     </div>
 
     <div
@@ -136,6 +142,13 @@ export default {
 
         &:hover
           background-color lighten(#ffda5b, 30%)
+
+  .banner
+    margin-left 2.5rem
+    flex 1
+
+    &-img
+      width 100%
 
   .features
     border-top 1px solid $borderColor
