@@ -50,8 +50,8 @@ module.exports = {
         title: '进阶',
         collapsable: false,
         children: [
+          '/docs/advanced/network-request',
           '/docs/advanced/environment-variables',
-          '/docs/advanced/mock-api',
         ],
       },
       {

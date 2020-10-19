@@ -31,22 +31,22 @@ module.exports = (options, ctx) => {
       ['container', {
         type: 'tip',
         defaultTitle: {
-          '/': 'TIP',
-          '/zh/': '提示',
+          '/': '提示',
+          '/en/': 'TIP',
         },
       }],
       ['container', {
         type: 'warning',
         defaultTitle: {
-          '/': 'WARNING',
-          '/zh/': '注意',
+          '/': '注意',
+          '/en/': 'WARNING',
         },
       }],
       ['container', {
         type: 'danger',
         defaultTitle: {
-          '/': 'WARNING',
-          '/zh/': '警告',
+          '/': '警告',
+          '/en/': 'WARNING',
         },
       }],
       ['container', {
