@@ -57,7 +57,9 @@ yarn install
 
 #### 启动项目
 ```sh
-npm run start # 或者： yarn start
+npm run start
+# 或者
+yarn start
 ```
 
 如无意外，打开浏览器访问 [http://localhost:8000]()，就能看到以下界面：
