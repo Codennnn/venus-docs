@@ -2,9 +2,9 @@
 
 Sonic 使用 [`SCSS`](https://www.sass.hk/) 作为 CSS 扩展语言。
 
-### 样式结构
+### 文件结构
 
-Sonic 中所有的通用样式都放置在 `@/assets/scss` 下。
+Sonic 中所有的样式文件都放置在 `@/assets/scss` 下。
 ```sh
 assets
 ├── scss
@@ -14,3 +14,28 @@ assets
 │   ├── tailwind.scss            # tailwind 的样式配置
 │   └── variables.scss           # 全局样式变量
 ```
+
+### 全局样式变量
+通过配置 `vue.config.js` 中的 `css.loaderOptions` 选项，你这样向所有 Scss/Less 样式传入共享的全局变量：
+```js
+css: {
+  loaderOptions: {
+    scss: {
+      prependData: '@import "@/assets/scss/variables.scss";',
+    },
+    less: {
+      lessOptions: {
+        modifyVars: {
+          'primary-color': '#6485ff',
+          ...
+        },
+        javascriptEnabled: true,
+      },
+    },
+  }
+}
+```
+
+### 样式兼容
+
+Sonic 已为你自动添加样式的浏览器前缀，你可以编辑 `package.json` 的 [browserslist](https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist) 字段来确定需要转译的 JavaScript 特性和需要添加的 CSS 浏览器前缀。
