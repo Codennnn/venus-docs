@@ -45,7 +45,7 @@ module.exports = {
           '/docs/dev/layout',
           '/docs/dev/router-and-nav',
           '/docs/dev/style',
-          '/docs/advanced/network-request',
+          '/docs/dev/network-request',
         ],
       },
       {
