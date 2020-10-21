@@ -4,4 +4,19 @@
 
 ### 封装 API
 
-为了实现打造为通用的您可以使用自定义配置创建axios的新实例
+使用 axios 我们可以很轻松地设置 `拦截器`、`错误处理`、`超时处理` 等功能。为了对接口进行统一的处理，在 `@/plugins/axios.js` 文件中我们创建了一个唯一的 axios 实例并将其导出。接下来，我们就可以通过引入 axios 实例来创建接口函数，像这样：
+```js
+import request from '@/plugins/axios'
+
+export function getUserInfo(params) {
+  return request({
+    url: '/user/info',
+    method: 'get',
+    params,
+  })
+}
+```
+
+所有的接口都被放在 `@/api` 下，按模块组织。
+
+### 模拟请求
