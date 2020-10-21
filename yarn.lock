@@ -7882,6 +7882,11 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
+vuepress-theme-sonic@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npm.taobao.org/vuepress-theme-sonic/download/vuepress-theme-sonic-0.1.0.tgz#580da9ec64c0ae9990cff941e4e56149645deb9a"
+  integrity sha1-WA2p7GTArpmQz/lB5OVhSWRd65o=
+
 vuepress@^1.7.0:
   version "1.7.0"
   resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.7.0.tgz#e4070016491d7ae9ae1a29e8919a94da0825b028"
