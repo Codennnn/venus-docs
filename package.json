@@ -12,6 +12,7 @@
     "vuepress": "^1.7.0"
   },
   "dependencies": {
+    "boxicons": "^2.0.6",
     "vuepress-theme-sonic": "^0.1.0"
   }
 }
