@@ -23,7 +23,10 @@ module.exports = {
         text: '文档',
         link: '/docs/base/',
         items: [
-          { text: '快速上手', link: '/docs/base/' },
+          { text: '入门', items: [{ text: '快速上手', link: '/docs/base/' }] },
+          { text: '开发', items: [{ text: '布局', link: '/docs/base/' }] },
+          { text: '进阶', items: [{ text: '环境变量', link: '/docs/base/' }] },
+          { text: '其他', items: [{ text: '常见问题', link: '/docs/base/' }] },
         ],
       },
       { text: '帮助', link: '/' },
