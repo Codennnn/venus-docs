@@ -6,7 +6,7 @@
 
 ### 准备工作
 
-运行 Sonic 需要具备以下开发环境：[yarn](https://yarnpkg.com/)、[node](https://nodejs.org/en/)和[git](https://git-scm.com/)，我们假设你已经了解相关的知识。
+运行 Venus 需要具备以下开发环境：[yarn](https://yarnpkg.com/)、[node](https://nodejs.org/en/)和[git](https://git-scm.com/)，我们假设你已经了解相关的知识。
 
 ### 基础模板
 

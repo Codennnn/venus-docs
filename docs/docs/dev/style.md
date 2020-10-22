@@ -1,10 +1,10 @@
 # 样式
 
-Sonic 使用 [`SCSS`](https://www.sass.hk/) 作为 CSS 扩展语言。
+Venus 使用 [`SCSS`](https://www.sass.hk/) 作为 CSS 扩展语言。
 
 ### 文件结构
 
-Sonic 中所有的样式文件都放置在 `@/assets/scss` 下。
+Venus 中所有的样式文件都放置在 `@/assets/scss` 下。
 ```sh
 assets
 ├── scss
@@ -38,4 +38,4 @@ css: {
 
 ### 样式兼容
 
-Sonic 已为你自动添加样式的浏览器前缀，你可以编辑 `package.json` 的 [browserslist](https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist) 字段来确定需要转译的 JavaScript 特性和需要添加的 CSS 浏览器前缀。
+Venus 已为你自动添加样式的浏览器前缀，你可以编辑 `package.json` 的 [browserslist](https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist) 字段来确定需要转译的 JavaScript 特性和需要添加的 CSS 浏览器前缀。

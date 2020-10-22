@@ -9,7 +9,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'Sonic',
+      title: 'Venus',
       description: '由 Vue.js 构建的管理平台开发模板',
     },
   },
