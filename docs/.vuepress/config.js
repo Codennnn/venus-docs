@@ -1,7 +1,7 @@
 module.exports = {
   evergreen: true,
-  theme: 'vuepress-theme-sonic',
-  // theme: require.resolve('../../vuepress-theme-sonic/'),
+  // theme: 'vuepress-theme-sonic',
+  theme: require.resolve('../../../vuepress-theme-sonic/vuepress-theme-sonic/'),
   head: [
     ['link', { rel: 'icon', href: '/logo/logo-icon.png' }],
   ],
