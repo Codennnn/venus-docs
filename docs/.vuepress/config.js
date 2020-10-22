@@ -34,6 +34,7 @@ module.exports = {
             text: '开发',
             items: [
               { text: '布局', link: '/docs/dev/layout' },
+              { text: '路由和菜单', link: '/docs/dev/router-and-nav' },
             ],
           },
           {
@@ -45,7 +46,7 @@ module.exports = {
           {
             text: '其他',
             items: [
-              { text: '常见问题', link: '/docs/base/' },
+              { text: '常见问题', link: '/docs/other/faq' },
             ],
           },
         ],
