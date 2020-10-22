@@ -21,13 +21,13 @@ module.exports = {
     nav: [
       {
         text: '文档',
-        link: '/docs/base/',
+        link: '/docs/base/introduction',
         items: [
           {
             text: '入门',
             items: [
-              { text: '介绍', link: '/docs/base/' },
-              { text: '快速上手', link: '/docs/base/getting-started' },
+              { text: '介绍', link: '/docs/base/introduction' },
+              { text: '开始使用', link: '/docs/base/getting-started' },
             ],
           },
           {
@@ -59,7 +59,7 @@ module.exports = {
         title: '入门',
         collapsable: false,
         children: [
-          '/docs/base/',
+          '/docs/base/introduction',
           '/docs/base/getting-started',
           '/docs/base/executable-script',
         ],
