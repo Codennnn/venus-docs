@@ -57,6 +57,7 @@ module.exports = {
     sidebar: [
       {
         title: '入门',
+        sidebarDepth: 0,
         collapsable: false,
         children: [
           '/docs/base/introduction',
@@ -66,6 +67,7 @@ module.exports = {
       },
       {
         title: '开发',
+        sidebarDepth: 0,
         collapsable: false,
         children: [
           '/docs/dev/layout',
@@ -76,6 +78,7 @@ module.exports = {
       },
       {
         title: '进阶',
+        sidebarDepth: 0,
         collapsable: false,
         children: [
           '/docs/advanced/environment-variables',
@@ -83,6 +86,7 @@ module.exports = {
       },
       {
         title: '其他',
+        sidebarDepth: 0,
         collapsable: false,
         children: [
           '/docs/other/resource',

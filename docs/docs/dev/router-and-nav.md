@@ -2,35 +2,35 @@
 
 路由和菜单建立了各个页面的联系，通过侧边栏的菜单，你可以轻松地到达各个功能页面。在 Venus 中，侧边栏的菜单是由路由配置生成的，因此你无需关心侧边栏真实的结构。这很神奇，要获得这样的好处，你仅仅需要修改一些配置。
 
-### 路由配置
+## 路由配置
 
 为了方便管理，路由的配置都在 [`@/router/router.js`]() 中定义。除了 vue-router 已规定的 [路由配置]((https://router.vuejs.org/zh/api/#routes))，还新增了以下配置项：
 
-#### `hidden`
+### `hidden`
 可选的，默认值：`false`
 
 当设为 `true` 时，路由将不会在侧边栏菜单中出现。
 
-#### `meta.title`
+### `meta.title`
 可选的，默认值：`false`
 
 
 
-#### `meta.roles`
+### `meta.roles`
 可选的，默认值：`false`
 
 
 
-#### `meta.icon`
+### `meta.icon`
 可选的，默认值：`false`
 
 
 
-#### `meta.openKey`
+### `meta.openKey`
 可选的，默认值：`false`
 
 
-### 动态路由
+## 动态路由
 
 在 `router.js` 中你可以看到那里定义了两种路由：`constantRoutes` 和 `asyncRoutes`，constantRoutes 是路由对象被创建时就已经初始化的**静态路由**，而 asyncRoutes 则是通过人为控制的方式生成的**动态路由**，一般是那些需要根据用户权限判断而生成的路由。
 
@@ -42,10 +42,10 @@ vue-router 的 [`addRoutes`](https://router.vuejs.org/zh/api/#router-addroutes) 
 { path: '*', redirect: '/not-found', hidden: true }
 ```
 
-### 面包屑
+## 面包屑
 
 
 
-### 侧边栏
+## 侧边栏
 
 
