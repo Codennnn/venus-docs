@@ -15,7 +15,7 @@ module.exports = {
   },
 
   themeConfig: {
-    logo: '/logo/logo.png',
+    logo: '/logo.png',
     repo: 'https://github.com/Chinesee/magic-sonic-docs',
     lastUpdated: '最近更新',
     nav: [
@@ -99,6 +99,10 @@ module.exports = {
     //   apiKey: '<API_KEY>',
     //   indexName: '<INDEX_NAME>'
     // }
+  },
+
+  markdown: {
+    anchor: { level: 2 },
   },
 
   configureWebpack: (config, isServer) => {
