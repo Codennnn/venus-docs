@@ -3,7 +3,7 @@ module.exports = {
   // theme: 'vuepress-theme-sonic',
   theme: require.resolve('../../../vuepress-theme-sonic/vuepress-theme-sonic/'),
   head: [
-    ['link', { rel: 'icon', href: '/logo/logo-icon.png' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
   ],
 
   locales: {
@@ -52,12 +52,11 @@ module.exports = {
         ],
       },
       { text: '帮助', link: '/' },
-      { text: '关于作者', link: 'https://chinesee.gitee.io/blog-nuxt/' },
+      { text: '关于', link: 'https://chinesee.gitee.io/blog-nuxt/' },
     ],
     sidebar: [
       {
         title: '入门',
-        // sidebarDepth: 1,
         collapsable: false,
         children: [
           '/docs/base/introduction',
@@ -67,31 +66,31 @@ module.exports = {
       },
       {
         title: '开发',
-        // sidebarDepth: 1,
         collapsable: false,
         children: [
           '/docs/dev/layout',
           '/docs/dev/router-and-nav',
           '/docs/dev/style',
           '/docs/dev/network-request',
+          '/docs/dev/access-control',
         ],
       },
       {
         title: '进阶',
-        // sidebarDepth: 1,
         collapsable: false,
         children: [
           '/docs/advanced/environment-variables',
+          '/docs/advanced/code-format',
+          '/docs/advanced/cdn',
         ],
       },
       {
         title: '其他',
-        // sidebarDepth: 1,
         collapsable: false,
         children: [
           '/docs/other/resource',
           '/docs/other/faq',
-          '/docs/other/change-log',
+          ['https://leoku.top', '版本记录'],
         ],
       },
     ],
