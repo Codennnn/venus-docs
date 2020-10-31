@@ -1,6 +1,6 @@
 # 环境变量
 
-[环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html#模式) 可以让你灵活地切换状态。
+[环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html#模式) 为你提供了一个根据不同的编译环境生成不同值的全局变量的机制，可以让你灵活地切换应用的状态。根据规定，自定义的环境变量必须以 `VUE_APP` 开头，否则将无法生效。
 
 ## `VUE_APP_PAGE_TITLE`
 

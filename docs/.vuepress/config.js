@@ -61,7 +61,7 @@ module.exports = {
         children: [
           '/docs/base/introduction',
           '/docs/base/getting-started',
-          '/docs/base/executable-script',
+          '/docs/base/scripts',
         ],
       },
       {
@@ -71,7 +71,7 @@ module.exports = {
           '/docs/dev/layout',
           '/docs/dev/router-and-nav',
           '/docs/dev/style',
-          '/docs/dev/network-request',
+          '/docs/dev/network',
           '/docs/dev/access-control',
         ],
       },
@@ -82,6 +82,7 @@ module.exports = {
           '/docs/advanced/environment-variables',
           '/docs/advanced/code-format',
           '/docs/advanced/cdn',
+          '/docs/advanced/deploy',
         ],
       },
       {
