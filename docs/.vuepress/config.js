@@ -72,7 +72,7 @@ module.exports = {
           '/docs/dev/router-and-nav',
           '/docs/dev/style',
           '/docs/dev/network',
-          '/docs/dev/access-control',
+          '/docs/dev/permission',
         ],
       },
       {

@@ -1,21 +1,7 @@
 # 使用 CDN
 
-[环境变量](https://cli.vuejs.org/zh/guide/mode-and-env.html#模式) 可以让你灵活地切换状态。
+你可以通过执行npm run preview -- --report来分析webpack打包之后的结果，观察各个静态资源的大小。你可以发现占用空间最多的是第三方依赖。如vue、element-ui、 ECharts等。
 
-## `VUE_APP_PAGE_TITLE`
+你可以使用 CDN 外链的方式引入这些第三方库，这样能大大增加构建的速度(通过 CDN 引入的资源不会经 webpack 打包)。如果你的项目没有自己的CDN服务的话，使用一些第三方的CDN服务，如unpkg等是一个很好的选择，它提供过了免费的资源加速，同时提供了缓存优化，由于你的第三方资源是在html中通过script引入的，它的缓存更新策略都是你自己手动来控制的，省去了你需要优化缓存策略功夫。
 
-## `VUE_APP_ROUTER_MODE`
-## `VUE_APP_BASE_API`
-API 接口域名
-## `VUE_APP_REQUEST_BASE_URL`
-接口统一标识
-## `VUE_APP_PUBLIC_PATH`
-如果要部署到类似「码云 Pages」或「Github Pages」，则此处更改为仓库名称
-## `VUE_APP_OUTPUT_DIR`
-打包路径
-## `VUE_APP_ROUTE_PERMISSION_KEY_NAME`
-路由权限的 key 字段名称
-## `VUE_APP_PROJECT_URL`
-项目仓库地址
-## `VUE_APP_DOC_URL`
-项目文档地址
+## 使用方式

@@ -54,9 +54,7 @@ import Mock from 'mockjs'
 // 定义你想拦截的请求接口
 Mock.mock('/user/info', 'get', { /* 自定义的模拟数据 */ })
 
-Mock.setup({
-  timeout: '300-500',
-})
+Mock.setup()
 ```
 
 要使其生效，你还需要在 `main.js` 中导入刚刚写好的配置：
@@ -65,7 +63,7 @@ Mock.setup({
 import '@/mock'
 ```
 
-更多用法请查阅 [``](http://mockjs.com/examples.html)
+更多用法请查阅 [Mock.js 示例](http://mockjs.com/examples.html)
 
 
 ### 关闭模拟请求
