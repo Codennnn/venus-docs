@@ -12,7 +12,7 @@ const menus = [
     menu: [
       { text: '布局', link: '/docs/dev/layout' },
       { text: '路由和菜单', link: '/docs/dev/router-and-nav' },
-      { text: '样式', link: '/docs/dev/style' },
+      { text: '主题与样式', link: '/docs/dev/style' },
       { text: '权限控制', link: '/docs/dev/permission' },
     ],
   },
