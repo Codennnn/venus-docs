@@ -124,7 +124,7 @@ export default {
   display flex
   align-items center
   justify-content center
-  color $textGrayColor
+  color $textColor
   font-size 1rem
 
   &.home-links
@@ -164,7 +164,7 @@ export default {
   .nav-links a
     &:hover,
     &.router-link-active
-      color $textColor
+      color $accentColor
 
   .nav-item > a:not(.external)
     &:hover,

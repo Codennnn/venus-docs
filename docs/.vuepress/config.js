@@ -29,7 +29,7 @@ const menus = [
     group: '其他',
     menu: [
       { text: '常见问题', link: '/docs/other/faq' },
-      { text: '版本记录', link: 'https://leoku.top', external: true },
+      { text: '版本记录', link: 'https://github.com/Chinesee/venus/releases', external: true },
     ],
   },
 ]
@@ -48,7 +48,7 @@ function getNavbar() {
       })),
     },
     { text: 'Blog', link: '/blog/' },
-    { text: 'About', link: 'https://chinesee.gitee.io/blog-nuxt/' },
+    { text: 'About', link: 'https://leoku.top/' },
   ]
   return { nav }
 }
@@ -89,6 +89,9 @@ module.exports = {
     lastUpdated: '最近更新',
     ...getNavbar(),
     ...getSidebar(),
+    blog: [
+      '/blog/how',
+    ],
     // algolia: {
     //   apiKey: '<API_KEY>',
     //   indexName: '<INDEX_NAME>'

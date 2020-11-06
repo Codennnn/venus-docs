@@ -139,7 +139,6 @@ a.sidebar-link
     color $textColor
 
     &::before
-      // height 30px
       transform translate(0%, -50%)
       opacity 1
 

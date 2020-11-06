@@ -147,6 +147,32 @@ export function resolveSidebarItems(page, regularPath, site, localePath) {
   }
 }
 
+export function resolveBlogItems(page, regularPath, site, localePath) {
+  const { pages, themeConfig } = site
+
+  const localeConfig = localePath && themeConfig.locales
+    ? themeConfig.locales[localePath] || themeConfig
+    : themeConfig
+
+  const pageSidebarConfig = page.frontmatter.blog || localeConfig.blog || themeConfig.blog
+  if (pageSidebarConfig === 'auto') {
+    return resolveHeaders(page)
+  }
+
+  const sidebarConfig = localeConfig.blog || themeConfig.blog
+  if (!sidebarConfig) {
+    return []
+  } else {
+    const { base, config } = resolveMatchingConfig(regularPath, sidebarConfig)
+    if (config === 'auto') {
+      return resolveHeaders(page)
+    }
+    return config
+      ? config.map(item => resolveItem(item, pages, base))
+      : []
+  }
+}
+
 /**
  * @param { Page } page
  * @returns { SidebarGroup }

@@ -16,31 +16,46 @@
 
     <div class="content">
       <div>
-        <h1 class="title">Blog</h1>
+        <h1 class="title">{{ $page.title }}</h1>
       </div>
 
       <section class="articles">
-        <article>
-          <RouterLink to="/">
-            <h3>Gatsby Gazette for October 2020: The “How it Started…How it’s Going” Edition</h3>
-          </RouterLink>
-        </article>
+        <template v-for="({ title, description }, i) in blogItems">
+          <article :key="i">
+            <RouterLink to="/123">
+              <h3>{{ title }}</h3>
+              <p>{{ description }}</p>
+            </RouterLink>
+          </article>
+        </template>
       </section>
     </div>
   </main>
 </template>
 
 <script>
+import { resolveBlogItems } from '../util'
+
 export default {
   name: 'Blog',
+
+  computed: {
+    blogItems() {
+      return resolveBlogItems(
+        this.$page,
+        this.$page.regularPath,
+        this.$site,
+        this.$localePath,
+      )
+    },
+  },
 }
 </script>
 
 <style lang="stylus" scoped>
 .blog
   position relative
-  min-height 100vh
-  padding-top $navbarHeight
+  min-height 100vh - $navbarHeight
   box-sizing border-box
 
   .bg
@@ -51,21 +66,24 @@ export default {
 
     svg
       position absolute
-      top 100px
-      left -55vw
+      top 0
+      left -40vw
       height auto
       width calc(90vw + 25vh)
-      transform rotateZ(20deg)
+      // transform rotateZ(10deg)
       animation animation-rotate 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
       animation-delay 2s
       transform-origin center
 
   .content
+    position relative
+    z-index 10
     padding-top 6rem
-    padding-left 12rem
+    padding-left 20rem
     padding-right 2rem
 
     .title
+      margin 0
       color $accentColor
       font-size 3rem
 
