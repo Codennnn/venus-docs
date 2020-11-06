@@ -27,6 +27,8 @@ export default {
 
 <style lang="stylus">
 .sidebar
+  z-index $NavbarIndex - 1
+
   ul
     padding 0
     margin 0
@@ -43,7 +45,8 @@ export default {
     a
       font-weight 600
 
-    .nav-item, .repo-link
+    .nav-item,
+    .repo-link
       display block
       line-height 1.25rem
       font-size 1.1em

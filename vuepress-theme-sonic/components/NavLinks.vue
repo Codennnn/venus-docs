@@ -2,6 +2,7 @@
   <nav
     v-if="userLinks.length || repoLink"
     class="nav-links"
+    :class="[{ 'home-links': $page.frontmatter.home }]"
   >
     <!-- user links -->
     <div
@@ -123,13 +124,24 @@ export default {
   display flex
   align-items center
   justify-content center
-  color #a0a5b9
+  color $textGrayColor
+  font-size 1rem
+
+  &.home-links
+    color #fff
+
+    .nav-link,
+    .repo-link
+      &:hover,
+      &.router-link-active
+        color #fff
 
   a
     color inherit
     transition all 0.25s
 
-    &:hover, &.router-link-active
+    &:hover,
+    &.router-link-active
       color $accentColor
 
   .nav-item
@@ -144,15 +156,18 @@ export default {
 
 @media (max-width $MQMobile)
   .nav-links
-    .nav-item, .repo-link
+    .nav-item,
+    .repo-link
       margin-left 0
 
 @media (min-width $MQMobile)
   .nav-links a
-    &:hover, &.router-link-active
+    &:hover,
+    &.router-link-active
       color $textColor
 
   .nav-item > a:not(.external)
-    &:hover, &.router-link-active
+    &:hover,
+    &.router-link-active
       margin-bottom -2px
 </style>

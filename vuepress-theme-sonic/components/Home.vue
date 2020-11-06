@@ -3,8 +3,8 @@
     class="home"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
-    <div class="hero">
-      <div>
+    <section class="hero">
+      <div class="hero-left">
         <h1
           v-if="data.heroText !== null"
           class="main-title"
@@ -38,10 +38,12 @@
           src="/banner.png"
           alt="banner"
         >
+        <div class="bg"></div>
       </div>
-    </div>
 
-    <div
+    </section>
+
+    <section
       v-if="data.features && data.features.length"
       class="features"
     >
@@ -53,7 +55,7 @@
         <h2>{{ feature.title }}</h2>
         <p>{{ feature.details }}</p>
       </div>
-    </div>
+    </section>
 
     <Content class="theme-default-content custom" />
     <div
@@ -97,58 +99,92 @@ export default {
 
 <style lang="stylus">
 .home
-  padding $navbarHeight 2rem 0
   max-width $homePageWidth
   margin 0px auto
+  padding $navbarHeight 2rem 0
   display block
 
   .hero
-    padding 3rem 0
+    position relative
+    min-height 90vh - $navbarHeight
     display flex
     align-items center
 
-    .main-title
-      margin 0
-      font-size 3.2rem
+    .hero-left
+      position relative
+      z-index 100
 
-      .highlight
-        color $accentColor
+      .main-title
+        margin 0
+        font-size 3.2rem
 
-    .description
-      max-width 26rem
-      margin 1.5rem 0
-      font-size 1.1rem
-      line-height 2
-      color #a0a5b9
+        .highlight
+          color $accentColor
 
-    .action-button
-      display inline-block
-      padding 0.6rem 2rem
-      border-radius 0.5rem
-      transition background-color 0.3s
-      box-sizing border-box
+      .description
+        max-width 26rem
+        margin 1.5rem 0
+        font-size 1.1rem
+        line-height 1.8
+        color $textGrayColor
+        box-sizing border-box
 
-      &.start
-        margin-right 0.8rem
-        color #fff
-        background-color $accentColor
+      .action-button
+        display inline-block
+        padding 0.6rem 2rem
+        border-radius 0.5rem
+        transition background-color 0.3s
+        box-sizing border-box
 
-        &:hover
-          background-color lighten($accentColor, 30%)
+        &.start
+          margin-right 0.8rem
+          color #fff
+          background-color $accentColor
 
-      &.demo
-        color #6d580c
-        background-color #ffda5b
+          &:hover
+            background-color lighten($accentColor, 30%)
 
-        &:hover
-          background-color lighten(#ffda5b, 30%)
+        &.demo
+          color #6d580c
+          background-color #ffda5b
+
+          &:hover
+            background-color lighten(#ffda5b, 30%)
 
   .banner
-    margin-left 2.5rem
+    position relative
+    z-index 10
+    margin-left 5rem
     flex 1
 
     &-img
+      position relative
+      z-index 10
       width 100%
+      border-radius 1rem
+      box-shadow 0 5px 20px rgba(0, 0, 0, 0.1)
+
+    .bg
+      content ''
+      position absolute
+      bottom -40%
+      left 25%
+      transform-origin 0% 100%
+      transform rotateZ(-20deg) scale(4, 4)
+      width 1000px
+      height 1000px
+      background-color lighten($accentColor, 92%)
+      border-radius 0.8rem
+
+      &::before
+        content ''
+        position absolute
+        top -6px
+        right -7px
+        width 1000px
+        height 1000px
+        background-color $accentColor
+        border-radius 0.8rem
 
   .features
     border-top 1px solid $borderColor
@@ -181,8 +217,34 @@ export default {
     text-align center
     color lighten($textColor, 25%)
 
+@media (max-width 1200px)
+  .home
+    .bg
+      display none
+
+    .description
+      min-width 100%
+
 @media (max-width $MQMobile)
   .home
+    .hero
+      text-align center
+
+      .hero-left
+        width 100%
+        display flex
+        flex-direction column
+        justify-content center
+
+      .description
+        min-width 100%
+        margin-left auto
+        margin-right auto
+        font-size 1rem
+
+    .banner
+      display none
+
     .features
       flex-direction column
 
@@ -203,11 +265,13 @@ export default {
       h1
         font-size 2rem
 
-      h1, .description, .action
+      h1,
+      .description,
+      .action
         margin 1.2rem auto
 
       .description
-        font-size 1.2rem
+        font-size 1rem
 
       .action-button
         font-size 1rem

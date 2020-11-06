@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <header class="home-navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <RouterLink
@@ -28,31 +28,19 @@
     >
       <NavLinks class="can-hide" />
     </div>
-
-    <div class="external-links-search">
-      <AlgoliaSearchBox
-        v-if="isAlgoliaSearch"
-        :options="algolia"
-      />
-      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-    </div>
   </header>
 </template>
 
 <script>
-import AlgoliaSearchBox from '@AlgoliaSearchBox'
-import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
 
 export default {
-  name: 'Navbar',
+  name: 'HomeNavbar',
 
   components: {
     SidebarButton,
     NavLinks,
-    SearchBox,
-    AlgoliaSearchBox,
   },
 
   data() {
@@ -62,13 +50,6 @@ export default {
   },
 
   computed: {
-    algolia() {
-      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-    },
-
-    isAlgoliaSearch() {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName
-    },
   },
 
   mounted() {
@@ -96,13 +77,15 @@ function css(el, property) {
 </script>
 
 <style lang="stylus">
-.navbar
-  padding 0 1.2rem
+.home-navbar
+  position relative
+  z-index $NavbarIndex
+  height $navbarHeight
+  line-height $navbarHeight - 1.4rem
+  padding 0 3rem
   display flex
   align-items center
   justify-content center
-  line-height $navbarHeight - 1.4rem
-  background-color #fff
 
   a,
   span,
@@ -110,20 +93,20 @@ function css(el, property) {
     display inline-block
 
   .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
+    height $navbarHeight - 1rem
+    min-width $navbarHeight - 1rem
     margin-right 0.8rem
     vertical-align top
 
   .home-link
-    position absolute
-    left 0px
-    margin-right 40px
+    margin-right auto
     padding-left 10px
+    display flex
+    align-items center
     font-weight bold
 
   .site-name
-    font-size 1.3rem
+    font-size 1.8rem
     font-weight 600
     color $textColor
     position relative
@@ -132,6 +115,7 @@ function css(el, property) {
     position relative
     display flex
     white-space nowrap
+    color #fff
     font-size 0.9rem
 
   .external-links-search
@@ -152,7 +136,7 @@ function css(el, property) {
       border-radius 0.4rem
 
 @media (max-width 1400px)
-  .navbar
+  .home-navbar
     justify-content flex-start
 
     .home-link
@@ -161,7 +145,7 @@ function css(el, property) {
       padding-right 20px
 
 @media (max-width $MQMobile)
-  .navbar
+  .home-navbar
     padding-left 4rem
 
     .can-hide

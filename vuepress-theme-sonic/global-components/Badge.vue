@@ -4,22 +4,22 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'tip',
+      default: 'tip'
     },
     text: String,
     vertical: {
       type: String,
-      default: 'top',
-    },
+      default: 'top'
+    }
   },
-  render(h, { props, slots }) {
+  render (h, { props, slots }) {
     return h('span', {
       class: ['badge', props.type],
       style: {
-        verticalAlign: props.vertical,
-      },
+        verticalAlign: props.vertical
+      }
     }, props.text || slots().default)
-  },
+  }
 }
 </script>
 
@@ -33,19 +33,12 @@ export default {
   padding 0 6px
   color white
   background-color #42b983
-
-  &.tip,
-  &.green
+  &.tip, &.green
     background-color $badgeTipColor
-
   &.error
     background-color $badgeErrorColor
-
-  &.warning,
-  &.warn,
-  &.yellow
+  &.warning, &.warn, &.yellow
     background-color $badgeWarningColor
-
   & + &
     margin-left 5px
 </style>

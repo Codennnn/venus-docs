@@ -6,7 +6,8 @@
 @require './toc'
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap')
 
-html, body
+html,
+body
   padding 0
   margin 0
   background-color #fff
@@ -28,7 +29,7 @@ body
 
 ::-webkit-scrollbar-thumb
   border-radius 10px !important
-  background-color #F1F1F1 !important
+  background-color #CCC !important
 
 ::-webkit-scrollbar-track-piece
   background-color #FFF !important
@@ -38,12 +39,11 @@ body
 
 .navbar
   position fixed
-  z-index 20
+  z-index $NavbarIndex
   top 0
   left 0
   right 0
   height $navbarHeight
-  background-color #fff
   box-sizing border-box
 
 .sidebar-mask
@@ -118,13 +118,19 @@ blockquote
   & > p
     margin 0
 
-ul, ol
+ul,
+ol
   padding-left 1.2em
 
 strong
   font-weight 600
 
-h1, h2, h3, h4, h5, h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
   font-weight 600
   line-height 1.25
 
@@ -137,7 +143,9 @@ h1, h2, h3, h4, h5, h6
       margin-top -1.5rem
       margin-bottom 1rem
 
-      + p, + pre, + .custom-block
+      + p,
+      + pre,
+      + .custom-block
         margin-top 2rem
 
   &:hover .header-anchor
@@ -165,10 +173,14 @@ a.header-anchor
   &:hover
     text-decoration none !important
 
-code, kbd, .line-number
+code,
+kbd,
+.line-number
   font-family source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
-p, ul, ol
+p,
+ul,
+ol
   line-height 1.7
 
 hr
@@ -187,7 +199,8 @@ tr
   &:nth-child(2n)
     background-color #f6f8fa
 
-th, td
+th,
+td
   border 1px solid #dfe2e5
   padding 0.6em 1em
 
@@ -197,7 +210,12 @@ th, td
       display block
 
   &.no-navbar
-    {$contentClass}:not(.custom) > h1, h2, h3, h4, h5, h6
+    {$contentClass}:not(.custom) > h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
       margin-top 1.5rem
       padding-top 0
 
