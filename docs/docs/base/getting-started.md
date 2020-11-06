@@ -8,7 +8,7 @@
 
 运行 Venus 需要具备以下开发环境：[yarn](https://yarnpkg.com/)、[node](https://nodejs.org/en/) 和 [git](https://git-scm.com/)，我们假设你已经了解相关的知识。
 
-## 基础模板
+## 基础模板 <Badge text="推荐"/>
 
 本项目内置了许多功能，这些功能你也许不会用到。为此，我们准备了一个只包含核心功能的[基础模板]()以供你进行更个性化的开发。
 

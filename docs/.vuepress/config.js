@@ -70,7 +70,7 @@ function getSidebar() {
 module.exports = {
   evergreen: true,
   // theme: 'vuepress-theme-sonic',
-  theme: require.resolve('../../vuepress-theme-sonic/vuepress-theme-sonic/'),
+  theme: require.resolve('../../vuepress-theme-sonic/'),
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
   ],
