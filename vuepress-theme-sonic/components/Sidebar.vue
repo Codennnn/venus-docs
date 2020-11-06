@@ -27,8 +27,6 @@ export default {
 
 <style lang="stylus">
 .sidebar
-  z-index $NavbarIndex - 1
-
   ul
     padding 0
     margin 0

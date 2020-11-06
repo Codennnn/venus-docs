@@ -112,7 +112,7 @@ export default {
 
     .hero-left
       position relative
-      z-index 100
+      z-index 11
 
       .main-title
         margin 0

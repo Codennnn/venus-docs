@@ -38,7 +38,7 @@ const menus = [
 function getNavbar() {
   const nav = [
     {
-      text: '文档',
+      text: 'Docs',
       link: '/docs/base/introduction',
       items: menus.map(({ group, menu }) => ({
         text: group,
@@ -47,8 +47,8 @@ function getNavbar() {
         })),
       })),
     },
-    { text: '帮助', link: '/' },
-    { text: '关于', link: 'https://chinesee.gitee.io/blog-nuxt/' },
+    { text: 'Blog', link: '/blog/' },
+    { text: 'About', link: 'https://chinesee.gitee.io/blog-nuxt/' },
   ]
   return { nav }
 }
@@ -98,6 +98,8 @@ module.exports = {
   markdown: {
     anchor: { level: 2 },
   },
+
+  plugins: ['@vuepress/medium-zoom'],
 
   configureWebpack: (config, isServer) => {
     if (!isServer) {

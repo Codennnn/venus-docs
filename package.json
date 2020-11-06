@@ -9,6 +9,7 @@
     "deploy": "push-dir --dir=./docs/.vuepress/dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.7.1",
     "eslint": "^7.11.0",
     "eslint-plugin-vue": "^7.0.1",
     "push-dir": "^0.4.1",

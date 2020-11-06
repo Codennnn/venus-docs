@@ -1,5 +1,8 @@
 <template>
-  <header class="navbar">
+  <header
+    class="navbar"
+    :class="{ 'navbar-blog': $page.frontmatter.blog }"
+  >
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <RouterLink
@@ -102,7 +105,13 @@ function css(el, property) {
   align-items center
   justify-content center
   line-height $navbarHeight - 1.4rem
-  background-color #fff
+
+  &.navbar-blog
+    position relative
+
+  &:not(.navbar-blog)
+    background-color hsla(0, 0%, 100%, 0.8)
+    backdrop-filter saturate(180%) blur(5px)
 
   a,
   span,
