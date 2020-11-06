@@ -12,7 +12,7 @@ const menus = [
     menu: [
       { text: '布局', link: '/docs/dev/layout' },
       { text: '路由和菜单', link: '/docs/dev/router-and-nav' },
-      { text: '样式', link: '/docs/dev/style' },
+      { text: '主题与样式', link: '/docs/dev/style' },
       { text: '权限控制', link: '/docs/dev/permission' },
     ],
   },
@@ -33,6 +33,39 @@ const menus = [
     ],
   },
 ]
+
+
+function getNavbar() {
+  const nav = [
+    {
+      text: '文档',
+      link: '/docs/base/introduction',
+      items: menus.map(({ group, menu }) => ({
+        text: group,
+        items: menu.map(({ text, link }) => ({
+          text, link,
+        })),
+      })),
+    },
+    { text: '帮助', link: '/' },
+    { text: '关于', link: 'https://chinesee.gitee.io/blog-nuxt/' },
+  ]
+  return { nav }
+}
+
+function getSidebar() {
+  const sidebar = menus.map(({ group, menu }) => ({
+    title: group,
+    collapsable: false,
+    children: menu.map(({ link, text, external }) => {
+      if (external) {
+        return [link, text]
+      }
+      return link
+    }),
+  }))
+  return { sidebar }
+}
 
 module.exports = {
   evergreen: true,
@@ -71,36 +104,4 @@ module.exports = {
       // 修改客户端的 webpack 配置
     }
   },
-}
-
-function getNavbar() {
-  const nav = [
-    {
-      text: '文档',
-      link: '/docs/base/introduction',
-      items: menus.map(({ group, menu }) => ({
-        text: group,
-        items: menu.map(({ text, link }) => ({
-          text, link,
-        })),
-      })),
-    },
-    { text: '帮助', link: '/' },
-    { text: '关于', link: 'https://chinesee.gitee.io/blog-nuxt/' },
-  ]
-  return { nav }
-}
-
-function getSidebar() {
-  const sidebar = menus.map(({ group, menu }) => ({
-    title: group,
-    collapsable: false,
-    children: menu.map(({ link, text, external }) => {
-      if (external) {
-        return [link, text]
-      }
-      return link
-    }),
-  }))
-  return { sidebar }
 }

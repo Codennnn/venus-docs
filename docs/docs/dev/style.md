@@ -1,4 +1,4 @@
-# 样式
+# 主题与样式
 
 Venus 使用 [`SCSS`](https://www.sass.hk/) 作为 CSS 扩展语言。在 CSS 框架上，选择了 [`Tailwind CSS`](https://tailwindcss.com/)。
 
