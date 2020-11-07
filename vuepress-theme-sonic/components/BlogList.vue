@@ -35,7 +35,7 @@
             <p class="blog-item__desc">{{ blog.frontmatter.description }}</p>
             <div class="blog-item__more">
               查看全文
-              <i class="bx bx-right-arrow-alt"></i>
+              <icon-right-arrow style="transform: translateY(5px)" />
             </div>
           </RouterLink>
         </article>
@@ -46,10 +46,11 @@
 
 <script>
 import BgStars from '@theme/components/BgStars.vue'
+import IconRightArrow from '@theme/components/IconRightArrow.vue'
 
 export default {
   name: 'BlogList',
-  components: { BgStars },
+  components: { BgStars, IconRightArrow },
   props: ['blogItems'],
 }
 </script>
@@ -122,10 +123,6 @@ export default {
         font-size 1.1rem
         border-bottom 2px solid $accentColor
         transition all 0.3s
-
-        i
-          transform translateY(4px)
-          font-size 1.5rem
 
       &:hover
         .blog-item__title

@@ -4,7 +4,7 @@
 
 ## 路由配置
 
-为了方便管理，路由的配置都在 [`@/router/router.js`]() 中定义。除了 vue-router 已规定的 [路由配置](https://router.vuejs.org/zh/api/#routes) 外，还新增了以下配置项：
+为了方便管理，路由的配置都在 [`@/router/router.js`]() 中定义。除了 vue-router 已规定的[路由配置](https://router.vuejs.org/zh/api/#routes) 外，还新增了以下配置项：
 
 ### `hidden`
 可选的，默认值：`false`

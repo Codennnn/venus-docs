@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import matchQuery from './match-query'
+import matchQuery from '@vuepress/plugin-search/match-query'
 
 /* global SEARCH_MAX_SUGGESTIONS, SEARCH_PATHS, SEARCH_HOTKEYS */
 export default {
@@ -112,9 +112,10 @@ export default {
 
     // make suggestions align right when there are not enough items
     alignRight() {
-      const navCount = (this.$site.themeConfig.nav || []).length
-      const repo = this.$site.repo ? 1 : 0
-      return navCount + repo <= 2
+      // const navCount = (this.$site.themeConfig.nav || []).length
+      // const repo = this.$site.repo ? 1 : 0
+      // return navCount + repo <= 2
+      return true
     },
   },
 
@@ -216,7 +217,7 @@ export default {
     padding 0 0.5rem 0 2rem
     outline none
     transition all 0.2s ease
-    background #fff url('search.svg') 0.6rem 0.5rem no-repeat
+    background #fff url('/icon/search.svg') 0.6rem 0.45rem no-repeat
     background-size 1rem
 
     &:focus

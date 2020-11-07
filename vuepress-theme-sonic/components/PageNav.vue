@@ -8,7 +8,10 @@
         v-if="prev"
         class="prev"
       >
-        <i class="bx bx-left-arrow-alt arrow-icon"></i>
+        <icon-right-arrow
+          class="arrow-icon"
+          style="transform: scale(-1);"
+        />
         <a
           v-if="prev.type === 'external'"
           class="prev"
@@ -51,13 +54,14 @@
         >
           {{ next.title || next.path }}
         </RouterLink>
-        <i class="bx bx-right-arrow-alt arrow-icon"></i>
+        <icon-right-arrow class="arrow-icon" />
       </span>
     </p>
   </div>
 </template>
 
 <script>
+import IconRightArrow from '@theme/components/IconRightArrow.vue'
 import { resolvePage } from '../util'
 import isString from 'lodash/isString'
 import isNil from 'lodash/isNil'
@@ -66,6 +70,8 @@ export default {
   name: 'PageNav',
 
   props: ['sidebarItems'],
+
+  components: { IconRightArrow },
 
   computed: {
     prev() {
@@ -162,10 +168,10 @@ function flatten(items, res) {
     border-top 1px solid $borderColor
 
     .arrow-icon
-      font-size 1.4rem
       color $accentColor
 
-  .prev, .next
+  .prev,
+  .next
     display flex
     align-items center
 

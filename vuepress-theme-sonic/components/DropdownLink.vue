@@ -10,17 +10,14 @@
       @click="handleDropdown"
     >
       <span class="title">{{ item.text }}</span>
-      <i class="bx bx-chevron-down"></i>
+      <icon-chevron-down />
     </a>
     <a
       class="mobile-dropdown-title"
       @click="setOpen(!open)"
     >
       <span class="title">{{ item.text }}</span>
-      <i
-        class="bx bx-chevron-right"
-        :class="open ? 'down' : 'right'"
-      ></i>
+      <icon-chevron-down :class="open ? 'down' : 'right'" />
     </a>
 
     <DropdownTransition>
@@ -70,6 +67,7 @@
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
+import IconChevronDown from '@theme/components/IconChevronDown.vue'
 import DropdownTransition from '@theme/components/DropdownTransition.vue'
 import last from 'lodash/last'
 
@@ -78,6 +76,7 @@ export default {
 
   components: {
     NavLink,
+    IconChevronDown,
     DropdownTransition,
   },
 
@@ -152,14 +151,6 @@ export default {
     font-size inherit
       &:hover
         color $accentColor
-
-    .bx-chevron-right
-      position relative
-      top 2px
-      transition all 0.2s
-
-      &.down
-        transform rotateZ(90deg)
 
   .nav-dropdown
     .dropdown-item

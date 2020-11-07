@@ -3,9 +3,17 @@
     class="sidebar-button"
     @click="$emit('toggle-sidebar')"
   >
-    <i class="bx bx-menu-alt-left icon"></i>
+    <icon-menu-alt-left />
   </div>
 </template>
+
+<script>
+import IconMenuAltLeft from '@theme/components/IconMenuAltLeft.vue'
+
+export default {
+  components: { IconMenuAltLeft },
+}
+</script>
 
 <style lang="stylus">
 .sidebar-button
@@ -16,9 +24,6 @@
   height 1.8rem
   display none
   cursor pointer
-
-  .icon
-    font-size 1.8rem
 
 @media (max-width $MQMobile)
   .sidebar-button
