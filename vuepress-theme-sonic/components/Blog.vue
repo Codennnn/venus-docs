@@ -2,6 +2,7 @@
   <main class="blog">
     <div class="bg">
       <svg
+        class="bg-block"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1205 918"
       >
@@ -12,6 +13,7 @@
           opacity="1"
         ></path>
       </svg>
+      <bg-stars class="bg-stars" />
     </div>
 
     <div class="container">
@@ -43,10 +45,13 @@
 </template>
 
 <script>
+import BgStars from '@theme/components/BgStars.vue'
 import { resolveBlogItems } from '../util'
 
 export default {
   name: 'Blog',
+
+  components: { BgStars },
 
   computed: {
     blogItems() {
@@ -73,7 +78,7 @@ export default {
     left 0
     overflow visible
 
-    svg
+    .bg-block
       position absolute
       top 0
       left -40vw
@@ -83,6 +88,10 @@ export default {
       // animation animation-rotate 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
       // animation-delay 2s
       transform-origin center
+
+    .bg-stars
+      position absolute
+      width 100vw
 
   .container
     position relative
@@ -94,10 +103,10 @@ export default {
     .page-title
       margin-bottom 4rem
 
-    .title
-      margin 0
-      color $accentColor
-      font-size 3rem
+      h1
+        margin 0
+        color $accentColor
+        font-size 3rem
 
   .articles
     max-width 600px
@@ -144,4 +153,11 @@ export default {
   .blog
     .container
       padding 0 2rem
+
+      .page-title
+        margin 2rem 0
+
+        h1
+          margin 0
+          font-size 2rem
 </style>

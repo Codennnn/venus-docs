@@ -4,18 +4,24 @@
 
 ## `VUE_APP_PAGE_TITLE`
 
+网站的一级标题。比如设为“Venus Admin”时，每个路由的网页标题的后面都会带上一级标题，格式为：`xxx - Venus Admin`。
+
 ## `VUE_APP_ROUTER_MODE`
+
+vue-router 的路由模式，只能设为 `history` 或 `hash`，如果不设则默认使用 `history`。
+
 ## `VUE_APP_BASE_API`
-API 接口域名
+
+API 接口的主机域名，比如你的后端接口服务启动在 `http://localhost:7001`，则应将此变量设为 `http://localhost:7001`。
+
 ## `VUE_APP_REQUEST_BASE_URL`
-接口统一标识
+
+接口统一标识。比如设为 `/api` 时，当你请求如 `/users` 这样的接口时，会变为 `/api/users`。
+
 ## `VUE_APP_PUBLIC_PATH`
-如果要部署到类似「码云 Pages」或「Github Pages」，则此处更改为仓库名称
+
+如果要部署到类似「码云 Pages」或「GitHub Pages」，则设为仓库名称。
+
 ## `VUE_APP_OUTPUT_DIR`
-打包路径
-## `VUE_APP_ROUTE_PERMISSION_KEY_NAME`
-路由权限的 key 字段名称
-## `VUE_APP_PROJECT_URL`
-项目仓库地址
-## `VUE_APP_DOC_URL`
-项目文档地址
+
+打包后的文件输出的路径。

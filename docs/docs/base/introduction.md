@@ -10,7 +10,7 @@ Venus 在设计中使用了 [Ant Design Vue](https://www.antdv.com/docs/vue/intr
 
 无论你是 Vue 的初学者还是已经深入了解 Vue，Venus 对你来说都是一个不错的选择。使用此模板非常简单，但是需要了解 Javascript，Vue 和 Vue-Router 的基础知识，我们还建议你提前了解 ES2015 的语法，因为这对你理解模板的逻辑有帮助。
 
-## 关于文档
+## 关于本文档
 
 本文档使用 [vuepress](https://vuepress.vuejs.org/zh/) 编写，并使用了自定义主题 `vuepress-theme-sonic`。我们非常重视文档的编写，但是编写文档是一件极具挑战性的工作，一些细节可能会由于我们的疏忽而被遗漏，如果你认为某些地方需要改进或是发现了错误，欢迎到我们的仓库上提出 [issue](https://github.com/Chinesee/venus/issues)。
 

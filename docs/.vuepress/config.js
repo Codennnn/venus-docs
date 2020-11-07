@@ -91,6 +91,7 @@ module.exports = {
     ...getNavbar(),
     ...getSidebar(),
     blog: [
+      '/blog/deploy-vue-app-to-github-pages',
       '/blog/how',
       '/blog/how-to',
     ],
