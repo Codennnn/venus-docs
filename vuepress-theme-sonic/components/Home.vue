@@ -107,12 +107,14 @@ export default {
   .hero
     position relative
     min-height 90vh - $navbarHeight
+    max-height 1400px
     display flex
     align-items center
 
     .hero-left
       position relative
       z-index 11
+      margin 4rem 0
 
       .main-title
         margin 0
@@ -228,6 +230,10 @@ export default {
 @media (max-width $MQMobile)
   .home
     .hero
+      min-height auto
+      display flex
+      flex-direction column-reverse
+      justify-content flex-end
       text-align center
 
       .hero-left
@@ -243,7 +249,9 @@ export default {
         font-size 1rem
 
     .banner
-      display none
+      // display none
+      margin 0
+      flex 0
 
     .features
       flex-direction column

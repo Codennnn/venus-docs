@@ -14,20 +14,29 @@
       </svg>
     </div>
 
-    <div class="content">
-      <div>
+    <div class="container">
+      <div class="page-title">
         <h1 class="title">{{ $page.title }}</h1>
       </div>
 
       <section class="articles">
-        <template v-for="({ title, description }, i) in blogItems">
-          <article :key="i">
-            <RouterLink to="/123">
-              <h3>{{ title }}</h3>
-              <p>{{ description }}</p>
-            </RouterLink>
-          </article>
-        </template>
+        <article
+          v-for="(blog, i) in blogItems"
+          :key="i"
+          class="blog-item"
+        >
+          <RouterLink
+            class="blog-link"
+            :to="blog.path"
+          >
+            <h3 class="blog-item__title">{{ blog.title }}</h3>
+            <p class="blog-item__desc">{{ blog.frontmatter.description }}</p>
+            <div class="blog-item__more">
+              查看全文
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </RouterLink>
+        </article>
       </section>
     </div>
   </main>
@@ -71,16 +80,19 @@ export default {
       height auto
       width calc(90vw + 25vh)
       // transform rotateZ(10deg)
-      animation animation-rotate 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
-      animation-delay 2s
+      // animation animation-rotate 10s cubic-bezier(0.4, 0, 0.2, 1) infinite
+      // animation-delay 2s
       transform-origin center
 
-  .content
+  .container
     position relative
     z-index 10
     padding-top 6rem
     padding-left 20rem
     padding-right 2rem
+
+    .page-title
+      margin-bottom 4rem
 
     .title
       margin 0
@@ -88,10 +100,48 @@ export default {
       font-size 3rem
 
   .articles
-    width 400px
+    max-width 600px
+
+    .blog-item
+      margin-bottom 3.5rem
+      cursor pointer
+
+      .blog-link
+        color $textColor
+
+      &__title
+        max-width 450px
+        margin 0
+        line-height 1.5
+        font-size 1.6rem
+        transition all 0.3s
+
+      &__desc
+        font-size 1.1rem
+        font-weight normal
+        color lighten($textColor, 40%)
+
+      &__more
+        display inline-block
+        padding 0 0 2px 0
+        color $accentColor
+        font-size 1.1rem
+        border-bottom 1px solid $accentColor
+        transition all 0.3s
+
+        i
+          transform translateY(4px)
+          font-size 1.5rem
+
+      &:hover
+        .blog-item__title
+          color $accentColor
+
+        .blog-item__more
+          border-bottom 1px solid transparent
 
 @media (max-width $MQMobile)
   .blog
-    .content
+    .container
       padding 0 2rem
 </style>

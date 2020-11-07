@@ -48,7 +48,7 @@ function getNavbar() {
       })),
     },
     { text: 'Blog', link: '/blog/' },
-    { text: 'About', link: 'https://leoku.top/' },
+    { text: 'Plugins', link: '/blog/' },
   ]
   return { nav }
 }
@@ -91,6 +91,7 @@ module.exports = {
     ...getSidebar(),
     blog: [
       '/blog/how',
+      '/blog/how-to',
     ],
     // algolia: {
     //   apiKey: '<API_KEY>',
