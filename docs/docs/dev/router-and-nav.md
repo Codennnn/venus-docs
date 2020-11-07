@@ -1,4 +1,4 @@
-# 路由和菜单
+# 路由和导航
 
 路由和菜单建立了各个页面的联系，通过侧边栏的菜单，你可以轻松地到达各个功能页面。在 Venus 中，侧边栏的菜单是由路由配置生成的，因此你无需关心侧边栏真实的结构。这很神奇，要获得这样的好处，你仅仅需要修改一些配置。
 
@@ -7,27 +7,32 @@
 为了方便管理，路由的配置都在 [`@/router/router.js`]() 中定义。除了 vue-router 已规定的[路由配置](https://router.vuejs.org/zh/api/#routes) 外，还新增了以下配置项：
 
 ### `hidden`
-可选的，默认值：`false`
+可选，类型： `boolean`，默认值： `false`
 
-当设为 `true` 时，路由将不会在侧边栏菜单中出现。
+为 `true` 时该菜单不在侧边栏中显示。
+
+### `disabled`
+可选，类型： `boolean`
+
+为 `true` 时侧边栏菜单将会置灰且不可点击。
 
 ### `meta.title`
-可选的，默认值：`false`
+可选，类型： `string`
 
-
+该路由要显示的二级网页标题，如果不填则只显示一级标题。
 
 ### `meta.roles`
-可选的，默认值：`false`
+可选，类型： `string` | `array` | `function`
 
-
+用户的角色标识
 
 ### `meta.icon`
-可选的，默认值：`false`
+可选，类型： `string`
 
-
+侧边栏菜单项显示的图标，它的值必须为 [feather-icon](https://feathericons.com/) 拥有的图标名。
 
 ### `meta.openKey`
-可选的，默认值：`false`
+可选，默认值：`false`
 
 
 ## 动态路由

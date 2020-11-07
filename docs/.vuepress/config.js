@@ -93,7 +93,7 @@ module.exports = {
     blog: [
       '/blog/deploy-vue-app-to-github-pages',
       '/blog/how',
-      '/blog/how-to',
+      '/blog/how-do-i-create-venus',
     ],
     // algolia: {
     //   apiKey: '<API_KEY>',
