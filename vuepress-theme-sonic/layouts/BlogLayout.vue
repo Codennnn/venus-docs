@@ -11,7 +11,7 @@
     />
 
     <Sidebar
-      :items="sidebarItems"
+      :items="blogItems"
       @toggle-sidebar="toggleSidebar"
     >
       <template #top>
@@ -22,7 +22,7 @@
       </template>
     </Sidebar>
 
-    <Blog />
+    <Blog :blog-items="blogItems" />
   </div>
 </template>
 
@@ -30,7 +30,7 @@
 import Blog from '@theme/components/Blog.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
-import { resolveSidebarItems } from '../util'
+import { resolveBlogItems } from '../util'
 
 export default {
   name: 'BlogLayout',
@@ -61,8 +61,8 @@ export default {
       )
     },
 
-    sidebarItems() {
-      return resolveSidebarItems(
+    blogItems() {
+      return resolveBlogItems(
         this.$page,
         this.$page.regularPath,
         this.$site,

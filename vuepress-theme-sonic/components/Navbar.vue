@@ -1,7 +1,7 @@
 <template>
   <header
     class="navbar"
-    :class="{ 'navbar-blog': $page.frontmatter.blog }"
+    :class="{ 'navbar-blog': $page.path.includes('/blog') }"
   >
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 

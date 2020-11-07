@@ -101,12 +101,12 @@ export default {
 .home
   max-width $homePageWidth
   margin 0px auto
-  padding $navbarHeight 2rem 0
+  padding 0 2rem
   display block
 
   .hero
     position relative
-    min-height 90vh - $navbarHeight
+    min-height 'calc(100vh - %s)' % $navbarHeight
     max-height 1400px
     display flex
     align-items center

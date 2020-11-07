@@ -79,7 +79,7 @@ function css(el, property) {
 <style lang="stylus">
 .home-navbar
   position relative
-  z-index $NavbarIndex
+  z-index $navbarIndex
   height $navbarHeight
   line-height $navbarHeight - 1.4rem
   padding 0 3rem
