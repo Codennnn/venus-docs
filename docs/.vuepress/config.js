@@ -48,7 +48,7 @@ function getNavbar() {
       })),
     },
     { text: 'Blog', link: '/blog/' },
-    { text: 'Plugins', link: '/blog/' },
+    { text: 'Plugins', link: '/plugins/' },
   ]
   return { nav }
 }
@@ -57,6 +57,7 @@ function getSidebar() {
   const sidebar = menus.map(({ group, menu }) => ({
     title: group,
     collapsable: false,
+    sidebarDepth: 0,
     children: menu.map(({ link, text, external }) => {
       if (external) {
         return [link, text]

@@ -8,4 +8,25 @@
 
 ## 配合 VS Code
 
+要想让你的编辑器智能地帮你完成代码检测和自动修复，你需要安装这些插件：[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)、[Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)、[Beautify css/sass/scss/less](https://marketplace.visualstudio.com/items?itemName=michelemelluso.code-beautifier)。
 
+然后在 VS Code 的配置文件中加入一下配置：
+```json
+"editor.formatOnSave": true,
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+},
+"vetur.format.enable": true,
+"vetur.format.defaultFormatter.html": "js-beautify-html",
+"vetur.format.defaultFormatterOptions": {
+  "wrap_attributes": "preserve-aligned"
+},
+"vetur.validation.templateProps": true,
+"vetur.format.defaultFormatter.js": "vscode-typescript",
+"javascript.validate.enable": false,
+"[vue]": {
+  "editor.defaultFormatter": "octref.vetur"
+}
+```
+
+接下来的开发中，你就获得了保存文件即格式化代码的能力了，而不用自己手动修复一个个错误。

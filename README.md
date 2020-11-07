@@ -12,4 +12,4 @@
 
 <h1 align="center">Venus</h1>
 
-本文档使用 [vuepress](https://vuepress.vuejs.org/zh/) 编写，并自定义了主题 `vuepress-theme-sonic`
+本文档使用 [vuepress](https://vuepress.vuejs.org/zh/) 编写，并使用了自定义主题 `vuepress-theme-sonic`

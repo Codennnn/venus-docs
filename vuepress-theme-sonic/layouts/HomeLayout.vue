@@ -1,6 +1,6 @@
 <template>
   <div
-    class="theme-container"
+    class="theme-container home-container"
     :class="pageClasses"
   >
     <HomeNavbar @toggle-sidebar="toggleSidebar" />
@@ -91,3 +91,8 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus" scoped>
+.home-container
+  overflow-x hidden
+</style>

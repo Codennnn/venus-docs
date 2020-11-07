@@ -242,14 +242,16 @@ export default {
         flex-direction column
         justify-content center
 
-      .description
-        min-width 100%
-        margin-left auto
-        margin-right auto
-        font-size 1rem
+        .main-title
+          font-size 2.2rem
+
+        .description
+          min-width 100%
+          margin-left auto
+          margin-right auto
+          font-size 1rem
 
     .banner
-      // display none
       margin 0
       flex 0
 
@@ -264,26 +266,6 @@ export default {
   .home
     padding-left 1.5rem
     padding-right 1.5rem
-
-    .hero
-      img
-        max-height 210px
-        margin 2rem auto 1.2rem
-
-      h1
-        font-size 2rem
-
-      h1,
-      .description,
-      .action
-        margin 1.2rem auto
-
-      .description
-        font-size 1rem
-
-      .action-button
-        font-size 1rem
-        padding 0.6rem 1.2rem
 
     .feature
       h2

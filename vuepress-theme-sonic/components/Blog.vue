@@ -126,7 +126,7 @@ export default {
         padding 0 0 2px 0
         color $accentColor
         font-size 1.1rem
-        border-bottom 1px solid $accentColor
+        border-bottom 2px solid $accentColor
         transition all 0.3s
 
         i
@@ -138,7 +138,7 @@ export default {
           color $accentColor
 
         .blog-item__more
-          border-bottom 1px solid transparent
+          border-color transparent
 
 @media (max-width $MQMobile)
   .blog

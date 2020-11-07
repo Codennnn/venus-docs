@@ -1,7 +1,73 @@
 # 使用 CDN 资源
 
-你可以通过执行npm run preview -- --report来分析webpack打包之后的结果，观察各个静态资源的大小。你可以发现占用空间最多的是第三方依赖。如vue、element-ui、 ECharts等。
+当你的网站部署在宽带较小的服务器时，资源的加载会明显增加首页白屏的时间，即网页在首次下载资源完毕前未渲染任何内容，处于假死状态。这种情况下，你应该考虑使用 CDN 来加快资源的下载速度。
 
-你可以使用 CDN 外链的方式引入这些第三方库，这样能大大增加构建的速度(通过 CDN 引入的资源不会经 webpack 打包)。如果你的项目没有自己的CDN服务的话，使用一些第三方的CDN服务，如unpkg等是一个很好的选择，它提供过了免费的资源加速，同时提供了缓存优化，由于你的第三方资源是在html中通过script引入的，它的缓存更新策略都是你自己手动来控制的，省去了你需要优化缓存策略功夫。
+在不使用 CDN 资源情况下，我们引入的第三方依赖都会经过 webpack 处理，这样会增加应用的构建速度。
 
-## 配置方式
+## 选择合适的 CDN
+
+我们选择免费的 CDN，比如：[jsDelivr](https://www.jsdelivr.com/)、[unpkg](https://unpkg.com/)。当然，你也可以搭建自己的 CDN。
+
+## 配置 CDN 外链
+
+将以下代码添加进 `vue.config.js`。
+```js
+const IS_PROD = process.env.NODE_ENV === 'production'
+
+const assetsCDN = {
+  externals: {
+    vue: 'Vue',
+    'vue-router': 'VueRouter',
+    vuex: 'Vuex',
+    axios: 'axios',
+  },
+  css: [],
+  js: [
+    // 请注意顺序，vue.js 应该放在首位
+    '//cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
+    '//cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js',
+    '//cdn.jsdelivr.net/npm/vuex@3.1.3/dist/vuex.min.js',
+    '//cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js',
+  ],
+}
+
+module.exports = {
+  chainWebpack: (config) => {
+    config
+      .plugin('html')
+      .tap((args) => {
+        if (IS_PROD) {
+          // 传递给 index.html 模板
+          args[0].cdn = assetsCDN
+        }
+        return args
+      })
+  },
+
+  configureWebpack: (config) => {
+    if (IS_PROD) {
+      config.externals = {
+        ...config.externals,
+        ...assetsCDN.externals,
+      }
+    }
+  },
+}
+```
+
+之后在 `public/index.html` 注入外链。
+```html
+<head>
+  <!-- 引入样式 -->
+  <% for(var css of htmlWebpackPlugin.options.cdn.css) { %>
+    <link rel="stylesheet" href="<%=css%>">
+  <% } %>
+</head>
+
+<body>
+  <!-- 引入 JS -->
+  <% for(var js of htmlWebpackPlugin.options.cdn.js) { %>
+    <script src="<%=js%>"></script>
+  <% } %>
+</body>
+```
