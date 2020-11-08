@@ -186,11 +186,12 @@ export default {
           &::after
             content ''
             position absolute
-            top calc(50% - 2px)
+            top 50%
             left 9px
             width 5px
             height 5px
             border-radius 50%
+            transform translateY(-50%)
             background-color $accentColor
 
       &:first-child h4

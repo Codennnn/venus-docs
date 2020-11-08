@@ -100,7 +100,7 @@ export default {
 <style lang="stylus">
 .home
   max-width $homePageWidth
-  margin 0px auto
+  margin 0 auto
   padding 0 2rem
   display block
 
@@ -114,7 +114,7 @@ export default {
     .hero-left
       position relative
       z-index 11
-      margin 4rem 0
+      margin 2rem 0
 
       .main-title
         margin 0
@@ -229,38 +229,41 @@ export default {
 
 @media (max-width $MQMobile)
   .home
-    .hero
-      min-height auto
+    padding-top 2rem
+    padding-bottom 2rem
+
+  .hero
+    min-height auto
+    display flex
+    flex-direction column-reverse
+    justify-content flex-end
+    text-align center
+
+    .hero-left
+      width 100%
       display flex
-      flex-direction column-reverse
-      justify-content flex-end
-      text-align center
+      flex-direction column
+      justify-content center
 
-      .hero-left
-        width 100%
-        display flex
-        flex-direction column
-        justify-content center
+      .main-title
+        font-size 2.2rem
 
-        .main-title
-          font-size 2.2rem
-
-        .description
-          min-width 100%
-          margin-left auto
-          margin-right auto
-          font-size 1rem
+      .description
+        min-width 100%
+        margin-left auto
+        margin-right auto
+        font-size 1rem
 
     .banner
       margin 0
       flex 0
 
-    .features
-      flex-direction column
+  .features
+    flex-direction column
 
-    .feature
-      max-width 100%
-      padding 0 2.5rem
+  .feature
+    max-width 100%
+    padding 0 2.5rem
 
 @media (max-width $MQMobileNarrow)
   .home

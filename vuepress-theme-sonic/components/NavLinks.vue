@@ -156,6 +156,9 @@ export default {
 
 @media (max-width $MQMobile)
   .nav-links
+    &.home-links
+      color $textColor
+
     .nav-item,
     .repo-link
       margin-left 0
