@@ -81,7 +81,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'Venus',
-      description: 'Venus 是由 Vue.js 构建的网站开发模板，可帮助你快速搭建一个后台管理系统。',
+      description: 'Venus 是由 Vue.js 驱动的中后台系统模板，凝聚了许多常用功能的具体实现，优秀的设计语言和高质量的代码绝对能让你眼前一亮',
     },
   },
 

@@ -1,7 +1,8 @@
 {
-  "name": "magic-sonic-docs",
+  "name": "venus-docs",
+  "description": "Venus is an awesome Vue admin templete.",
   "license": "MIT",
-  "author": "LeoKu",
+  "author": "LeoKu<czc12580520@gmail.com>",
   "scripts": {
     "start": "yarn dev",
     "dev": "vuepress dev docs",
