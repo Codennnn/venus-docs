@@ -48,7 +48,8 @@ function getNavbar() {
       })),
     },
     { text: 'Blog', link: '/blog/' },
-    { text: 'Plugins', link: '/plugins/' },
+    // { text: 'Plugins', link: '/plugins/' },
+    { text: 'Preview', link: 'https://venus.leoku.top/' },
   ]
   return { nav }
 }
@@ -92,8 +93,9 @@ module.exports = {
     ...getSidebar(),
     blog: [
       '/blog/deploy-vue-app-to-github-pages',
-      '/blog/how',
-      '/blog/how-do-i-create-venus',
+      // '/blog/vue-optimization',
+      // '/blog/why-venus',
+      // '/blog/how-do-i-create-venus',
     ],
     // algolia: {
     //   apiKey: '<API_KEY>',
