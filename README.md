@@ -1,6 +1,6 @@
 <p align="center">
   <a
-    href="https://venus.leoku.top"
+    href="https://venus.leoku.top/"
     target="_blank"
     rel="noopener noreferrer">
     <img

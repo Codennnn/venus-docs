@@ -6,5 +6,5 @@ tagline: 由 Vue.js 驱动的中后台系统模板，凝聚了许多常用功能
 startActionText: 快速上手
 startActionLink: /docs/base/introduction
 demoActionText: 在线体验
-demoActionLink: https://venus.leoku.top
+demoActionLink: https://venus.leoku.top/
 ---

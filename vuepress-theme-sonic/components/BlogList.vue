@@ -112,6 +112,8 @@ export default {
         transition all 0.3s
 
       &__desc
+        text-overflow-lines(2)
+        text-align justify
         font-size 1.1rem
         font-weight normal
         color lighten($textColor, 40%)
