@@ -48,8 +48,20 @@ function getNavbar() {
       })),
     },
     { text: 'Blog', link: '/blog/' },
-    // { text: 'Plugins', link: '/plugins/' },
-    { text: 'Preview', link: 'https://venus.leoku.top/' },
+    { text: 'Releases', link: 'https://github.com/Chinesee/venus/releases' },
+    {
+      text: 'Preview',
+      items: [
+        {
+          text: '国内站点',
+          items: [{ text: 'http://cn.venus.leoku.top/', link: 'http://cn.venus.leoku.top/' }],
+        },
+        {
+          text: 'GitHub Pages',
+          items: [{ text: 'https://venus.leoku.top/', link: 'https://venus.leoku.top/' }],
+        },
+      ],
+    },
   ]
   return { nav }
 }

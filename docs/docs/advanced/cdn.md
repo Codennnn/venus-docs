@@ -23,7 +23,7 @@ const assetsCDN = {
   },
   css: [],
   js: [
-    // 请注意顺序，vue.js 应该放在首位
+    // 请注意顺序，vue.js 应该位列在首位，以便首先加载 vue
     '//cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
     '//cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js',
     '//cdn.jsdelivr.net/npm/vuex@3.1.3/dist/vuex.min.js',

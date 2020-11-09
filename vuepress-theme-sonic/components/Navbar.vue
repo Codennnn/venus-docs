@@ -173,6 +173,7 @@ function css(el, property) {
 @media (max-width $MQMobile)
   .navbar
     padding-left 4rem
+    background-color #fff !important
 
     .can-hide
       display none

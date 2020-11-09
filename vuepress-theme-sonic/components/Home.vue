@@ -110,6 +110,7 @@ export default {
     max-height 1400px
     display flex
     align-items center
+    box-sizing border-box
 
     .hero-left
       position relative
@@ -228,10 +229,6 @@ export default {
       min-width 100%
 
 @media (max-width $MQMobile)
-  .home
-    padding-top 2rem
-    padding-bottom 2rem
-
   .hero
     min-height auto
     display flex
@@ -255,7 +252,7 @@ export default {
         font-size 1rem
 
     .banner
-      margin 0
+      margin 2rem 0 0 0
       flex 0
 
   .features

@@ -95,7 +95,7 @@ export default {
   computed: {
     isActive() {
       const basePath = this.$route.path.split('/')[1]
-      const linkBasePath = this.item.link.split('/')[1]
+      const linkBasePath = this.item.link && this.item.link.split('/')[1]
       return basePath === linkBasePath
     },
 
