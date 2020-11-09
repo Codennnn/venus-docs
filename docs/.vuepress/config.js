@@ -119,7 +119,13 @@ module.exports = {
     anchor: { level: 2 },
   },
 
-  plugins: ['@vuepress/medium-zoom'],
+  plugins: {
+    '@vuepress/medium-zoom': {
+      options: {
+        background: 'rgba(255, 255, 255, 0.92)',
+      },
+    },
+  },
 
   configureWebpack: (config, isServer) => {
     if (!isServer) {
