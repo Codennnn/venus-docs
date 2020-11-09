@@ -159,11 +159,11 @@ export function resolveBlogItems(page, regularPath, site, localePath) {
     return resolveHeaders(page)
   }
 
-  const sidebarConfig = localeConfig.blog || themeConfig.blog
-  if (!sidebarConfig) {
+  const blogConfig = localeConfig.blog || themeConfig.blog
+  if (!blogConfig) {
     return []
   } else {
-    const { base, config } = resolveMatchingConfig(regularPath, sidebarConfig)
+    const { base, config } = resolveMatchingConfig(regularPath, blogConfig)
     if (config === 'auto') {
       return resolveHeaders(page)
     }

@@ -13,24 +13,24 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     active: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>
 
 <style scoped>
-  .theme-code-block {
-    display: none;
-  }
-  .theme-code-block__active {
-    display: block;
-  }
-  .theme-code-block > pre {
-    background-color: orange;
-  }
+.theme-code-block {
+  display: none;
+}
+.theme-code-block__active {
+  display: block;
+}
+.theme-code-block > pre {
+  background-color: orange;
+}
 </style>
