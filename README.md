@@ -10,14 +10,21 @@
   </a>
 </p>
 
-<h1 align="center">Venus Admin</h1>
+<h1 align="center">Venus Docs</h1>
 
-## Introduction
+## 介绍
 
-Venus 是由 Vue.js 驱动的中后台系统模板，凝聚了许多常用功能的具体实现，优秀的设计语言和高质量的代码绝对能让你眼前一亮。本文档使用 [vuepress](https://vuepress.vuejs.org/zh/) 编写，并使用了自定义主题 `vuepress-theme-sonic`。
+Venus Docs 由 [vuepress](https://vuepress.vuejs.org/zh/) 驱动，并使用了自定义主题 `vuepress-theme-sonic`。
 
+## 文档地址
 
-## Live Preview
+### 国内站点
+https://cn.docs.leoku.top/
+
+### GitHub Pages
+https://docs.leoku.top/
+
+## 在线预览
 
 ### 国内站点
 https://cn.venus.leoku.top/
