@@ -46,11 +46,3 @@ vue-router 的 [`addRoutes`](https://router.vuejs.org/zh/api/#router-addroutes) 
 // 应该始终仅在 asyncRoutes 的最后加上这条声明
 { path: '*', redirect: '/not-found', hidden: true }
 ```
-
-## 面包屑
-
-
-
-## 侧边栏
-
-

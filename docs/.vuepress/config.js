@@ -105,8 +105,8 @@ module.exports = {
     ...getSidebar(),
     blog: [
       '/blog/deploy-vue-app-to-github-pages',
+      '/blog/ci-cd-with-github-actions-to-deploy-on-github-pages',
       // '/blog/vue-optimization',
-      // '/blog/why-venus',
       // '/blog/how-do-i-create-venus',
     ],
     // algolia: {
