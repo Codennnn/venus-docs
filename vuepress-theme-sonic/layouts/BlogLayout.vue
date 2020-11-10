@@ -23,6 +23,8 @@
     </Sidebar>
 
     <Blog :blog-items="blogItems" />
+
+    <page-footer />
   </div>
 </template>
 
@@ -30,12 +32,13 @@
 import Blog from '@theme/components/Blog.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import PageFooter from '@theme/components/PageFooter.vue'
 import { resolveBlogItems } from '../util'
 
 export default {
   name: 'BlogLayout',
 
-  components: { Blog, Navbar, Sidebar },
+  components: { Blog, Navbar, Sidebar, PageFooter },
 
   data() {
     return {

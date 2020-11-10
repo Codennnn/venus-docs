@@ -54,7 +54,7 @@ function getNavbar() {
       items: [
         {
           text: '国内站点',
-          items: [{ text: 'http://cn.venus.leoku.top/', link: 'http://cn.venus.leoku.top/' }],
+          items: [{ text: 'https://cn.venus.leoku.top/', link: 'https://cn.venus.leoku.top/' }],
         },
         {
           text: 'GitHub Pages',

@@ -4,6 +4,7 @@
       v-show="showBlogList"
       :blog-items="blogItems"
     />
+
     <blog-content
       v-show="!showBlogList"
       :blog-items="blogItems"
@@ -25,5 +26,3 @@ export default {
   },
 }
 </script>
-
-<style lang="stylus" scoped></style>

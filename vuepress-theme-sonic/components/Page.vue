@@ -2,7 +2,13 @@
   <main class="page">
     <slot name="top" />
 
-    <Content class="theme-default-content" />
+    <transition
+      name="sale-fade"
+      mode="out-in"
+    >
+      <Content class="theme-default-content" />
+    </transition>
+
     <PageEdit />
 
     <PageNav v-bind="{ sidebarItems }" />

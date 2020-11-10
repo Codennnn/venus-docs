@@ -23,6 +23,8 @@
     </Sidebar>
 
     <Home />
+
+    <page-footer />
   </div>
 </template>
 
@@ -30,12 +32,13 @@
 import Home from '@theme/components/Home.vue'
 import HomeNavbar from '@theme/components/HomeNavbar.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import PageFooter from '@theme/components/PageFooter.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
   name: 'HomeLayout',
 
-  components: { Home, HomeNavbar, Sidebar },
+  components: { Home, HomeNavbar, Sidebar, PageFooter },
 
   data() {
     return {

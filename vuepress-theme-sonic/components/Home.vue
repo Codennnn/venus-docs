@@ -99,6 +99,7 @@ export default {
 
 <style lang="stylus">
 .home
+  min-width 1100px
   max-width $homePageWidth
   margin 0 auto
   padding 0 2rem
@@ -170,7 +171,7 @@ export default {
     .bg
       content ''
       position absolute
-      bottom -40%
+      bottom -30%
       left 25%
       transform-origin 0% 100%
       transform rotateZ(-20deg) scale(4, 4)
@@ -220,15 +221,10 @@ export default {
     text-align center
     color lighten($textColor, 25%)
 
-@media (max-width 1200px)
-  .home
-    .bg
-      display none
-
-    .description
-      min-width 100%
-
 @media (max-width $MQMobile)
+  .home
+    min-width initial
+
   .hero
     min-height auto
     display flex
@@ -254,6 +250,9 @@ export default {
     .banner
       margin 2rem 0 0 0
       flex 0
+
+      .bg
+        display none
 
   .features
     flex-direction column

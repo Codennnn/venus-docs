@@ -20,7 +20,7 @@ Venus 是由 Vue.js 驱动的中后台系统模板，凝聚了许多常用功能
 ## Live Preview
 
 ### 国内站点
-http://cn.venus.leoku.top/
+https://cn.venus.leoku.top/
 
 ### GitHub Pages
 https://venus.leoku.top/
