@@ -60,6 +60,10 @@ function getNavbar() {
           text: 'GitHub Pages',
           items: [{ text: 'https://venus.leoku.top/', link: 'https://venus.leoku.top/' }],
         },
+        {
+          text: '基础模板',
+          items: [{ text: 'https://chinesee.github.io/venus-starter/', link: 'https://chinesee.github.io/venus-starter/' }],
+        },
       ],
     },
   ]
@@ -106,8 +110,6 @@ module.exports = {
     blog: [
       '/blog/deploy-vue-app-to-github-pages',
       '/blog/ci-cd-with-github-actions-to-deploy-on-github-pages',
-      // '/blog/vue-optimization',
-      // '/blog/how-do-i-create-venus',
     ],
     // algolia: {
     //   apiKey: '<API_KEY>',
