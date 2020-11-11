@@ -47,13 +47,13 @@ npm install push-dir --save-dev
 
 这个命令的意思是将 `dist` 目录推送到 `gh-pages`，完了之后删除本地对应的分支。运行 `npm run deploy` 成功后，你应该能在 GitHub 上看到这个分支的内容了。
 
-![gh-pages 分支内容](https://gitee.com/chinesee/images/raw/master/blog/001.png)
+![gh-pages 分支内容](https://gitee.com/chinesee/images/raw/master/blog/1.png)
 
 ### 设置 GitHub Pages
 
 进入我们项目所在的仓库设置里面，找到 `Options -> GitHub Pages`，将 GitHub Pages 构建在 `gh-pages` 上，像这样设置：
 
-![GitHub Pages 设置](https://gitee.com/chinesee/images/raw/master/blog/002.png)
+![GitHub Pages 设置](https://gitee.com/chinesee/images/raw/master/blog/2.png)
 
 设置成功后，你的网站就能通过 `https://[GitHub 账号名].github.io/[仓库名]/` 这样的格式访问了。通常到这一步就足够了，不过如果你希望为你的网站自定义域名，那么请看下一节的内容。
 
@@ -61,7 +61,7 @@ npm install push-dir --save-dev
 
 假设你已经拥有了自己的域名，那么你可以对你的 GitHub Pages 网站使用子域名，子域名配置是通过 DNS 提供商使用 CNAME 记录配置的，即子域名可以通过添加一个 CNAME 类型的主机记录，记录值为 `[GitHub 账号].github.io` 设置。比如本站的父级域名是 `leoku.top`，子域名为 `docs`。
 
-![GitHub Pages 设置](https://gitee.com/chinesee/images/raw/master/blog/003.png)
+![GitHub Pages 设置](https://gitee.com/chinesee/images/raw/master/blog/3.png)
 
 完成上面的操作后，在 `public` 文件夹下创建一个名为 `CNAME` 的文件，然后在里面写入你的域名，比如：
 ```
@@ -74,4 +74,4 @@ venus.leoku.top
 使用自定义域名的话就不用再设置 publicPath 了，保持默认即可。
 :::
 
-![GitHub Pages 设置](https://gitee.com/chinesee/images/raw/master/blog/004.png)
+![GitHub Pages 设置](https://gitee.com/chinesee/images/raw/master/blog/4.png)
