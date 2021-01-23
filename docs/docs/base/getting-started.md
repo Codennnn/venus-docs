@@ -10,7 +10,7 @@
 
 ## 基础模板 <Badge text="推荐"/>
 
-本项目内置了许多功能，这些功能你也许不会用到。为此，我们准备了一个只包含核心功能的[基础模板](https://github.com/Chinesee/venus-starter)以供你进行更个性化的开发。
+本项目内置了许多功能，这些功能你也许不会用到。为此，我们准备了一个只包含核心功能的[基础模板](https://github.com/Codennnn/venus-starter)以供你进行更个性化的开发。
 
 ## 目录结构
 

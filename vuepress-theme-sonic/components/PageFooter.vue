@@ -17,7 +17,7 @@
       <p class="footer-text">
         Created by <a
           class="author"
-          href="https://github.com/Chinesee"
+          href="https://github.com/Codennnn"
           rel="noopener noreferrer"
           target="_blank"
         >@LeoKu</a>. Powered by Vue.js. <br>
@@ -30,7 +30,7 @@
         class="icon"
         rel="noopener noreferrer"
         target="_blank"
-        href="https://github.com/Chinesee"
+        href="https://github.com/Codennnn"
         title="GitHub"
       >
         <icon-github />

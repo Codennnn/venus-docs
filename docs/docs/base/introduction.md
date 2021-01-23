@@ -12,7 +12,7 @@ Venus 在设计中使用了 [Ant Design Vue](https://www.antdv.com/docs/vue/intr
 
 ## 关于本文档
 
-本文档使用 [vuepress](https://vuepress.vuejs.org/zh/) 编写，并使用了自定义主题 `vuepress-theme-sonic`。我们非常重视文档的编写，但是编写文档是一件极具挑战性的工作，一些细节可能会由于我们的疏忽而被遗漏，如果你认为某些地方需要改进或是发现了错误，欢迎到我们的仓库上提出 [issue](https://github.com/Chinesee/venus/issues)。
+本文档使用 [vuepress](https://vuepress.vuejs.org/zh/) 编写，并使用了自定义主题 `vuepress-theme-sonic`。我们非常重视文档的编写，但是编写文档是一件极具挑战性的工作，一些细节可能会由于我们的疏忽而被遗漏，如果你认为某些地方需要改进或是发现了错误，欢迎到我们的仓库上提出 [issue](https://github.com/Codennnn/venus/issues)。
 
 ## 意见反馈
 

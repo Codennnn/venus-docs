@@ -33,7 +33,7 @@ jobs:
 
     - name: Push to gh-pages
       env:
-        GITHUB_REPO: github.com/Chinesee/venus-docs.git
+        GITHUB_REPO: github.com/Codennnn/venus-docs.git
       run: |
         cd ./docs/.vuepress/dist
         git init

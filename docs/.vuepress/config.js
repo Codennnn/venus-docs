@@ -29,7 +29,7 @@ const menus = [
     group: '其他',
     menu: [
       { text: '常见问题', link: '/docs/other/faq' },
-      { text: '版本记录', link: 'https://github.com/Chinesee/venus/releases', external: true },
+      { text: '版本记录', link: 'https://github.com/Codennnn/venus/releases', external: true },
     ],
   },
 ]
@@ -48,7 +48,7 @@ function getNavbar() {
       })),
     },
     { text: 'Blog', link: '/blog/' },
-    { text: 'Releases', link: 'https://github.com/Chinesee/venus/releases' },
+    { text: 'Releases', link: 'https://github.com/Codennnn/venus/releases' },
     {
       text: 'Preview',
       items: [
@@ -62,7 +62,7 @@ function getNavbar() {
         },
         {
           text: '基础模板',
-          items: [{ text: 'https://chinesee.github.io/venus-starter/', link: 'https://chinesee.github.io/venus-starter/' }],
+          items: [{ text: 'https://codennnn.github.io/venus-starter/', link: 'https://codennnn.github.io/venus-starter/' }],
         },
       ],
     },
@@ -103,7 +103,7 @@ module.exports = {
 
   themeConfig: {
     logo: '/logo.png',
-    repo: 'https://github.com/Chinesee/magic-sonic-docs',
+    repo: 'https://github.com/Codennnn/magic-sonic-docs',
     lastUpdated: '最近更新',
     ...getNavbar(),
     ...getSidebar(),
