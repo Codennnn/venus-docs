@@ -53,10 +53,6 @@ function getNavbar() {
       text: 'Preview',
       items: [
         {
-          text: '国内站点',
-          items: [{ text: 'https://cn.venus.leoku.top/', link: 'https://cn.venus.leoku.top/' }],
-        },
-        {
           text: 'GitHub Pages',
           items: [{ text: 'https://venus.leoku.top/', link: 'https://venus.leoku.top/' }],
         },

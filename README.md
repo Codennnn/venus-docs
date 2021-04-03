@@ -18,16 +18,10 @@ Venus Docs 由 [vuepress](https://vuepress.vuejs.org/zh/) 驱动，并使用了�
 
 ## 文档地址
 
-### 国内站点
-https://cn.docs.leoku.top/
-
 ### GitHub Pages
 https://docs.leoku.top/
 
 ## 在线预览
-
-### 国内站点
-https://cn.venus.leoku.top/
 
 ### GitHub Pages
 https://venus.leoku.top/
