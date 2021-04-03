@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>提炼自企业级中后台产品的交互语言和视觉风格 | Venus</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="提炼自企业级中后台产品的交互语言和视觉风格">
+    
+    <link rel="preload" href="/assets/css/0.styles.9ab0eb92.css" as="style"><link rel="preload" href="/assets/js/app.a4d739ee.js" as="script"><link rel="preload" href="/assets/js/4.891e6150.js" as="script"><link rel="preload" href="/assets/js/1.29b96c0a.js" as="script"><link rel="preload" href="/assets/js/32.dbb4b5f6.js" as="script"><link rel="prefetch" href="/assets/js/10.cba46770.js"><link rel="prefetch" href="/assets/js/11.ba9f5557.js"><link rel="prefetch" href="/assets/js/12.2c185d74.js"><link rel="prefetch" href="/assets/js/13.a46d4a65.js"><link rel="prefetch" href="/assets/js/14.48e2b9ee.js"><link rel="prefetch" href="/assets/js/15.d110c76b.js"><link rel="prefetch" href="/assets/js/16.d3b57cad.js"><link rel="prefetch" href="/assets/js/17.b0db7a6d.js"><link rel="prefetch" href="/assets/js/18.367bb56b.js"><link rel="prefetch" href="/assets/js/19.a95cf407.js"><link rel="prefetch" href="/assets/js/20.84e7564f.js"><link rel="prefetch" href="/assets/js/21.aceb1967.js"><link rel="prefetch" href="/assets/js/22.b8fc4782.js"><link rel="prefetch" href="/assets/js/23.c0763566.js"><link rel="prefetch" href="/assets/js/24.bf46ef03.js"><link rel="prefetch" href="/assets/js/25.7682a70f.js"><link rel="prefetch" href="/assets/js/26.8cfe10ad.js"><link rel="prefetch" href="/assets/js/27.6e78096d.js"><link rel="prefetch" href="/assets/js/28.9a57a237.js"><link rel="prefetch" href="/assets/js/29.55442fcc.js"><link rel="prefetch" href="/assets/js/3.a667699b.js"><link rel="prefetch" href="/assets/js/30.e3ff7e81.js"><link rel="prefetch" href="/assets/js/31.5d41ff00.js"><link rel="prefetch" href="/assets/js/5.170fa327.js"><link rel="prefetch" href="/assets/js/6.d5026ff6.js"><link rel="prefetch" href="/assets/js/7.53406768.js"><link rel="prefetch" href="/assets/js/8.5efbf798.js"><link rel="prefetch" href="/assets/js/9.01a78942.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9ab0eb92.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:currentColor;"><path d="M4 11H16V13H4zM4 6H20V8H4zM4 18L11 18 11.235 18 11.235 16 11 16 4 16z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Venus" class="logo"> <span class="site-name can-hide">Venus</span></a> <div class="links"><nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a href="/docs/base/introduction" class="dropdown-title nav-link"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          入门
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/base/introduction.html" class="nav-link">
+  介绍
+</a></li><li class="dropdown-subitem"><a href="/docs/base/getting-started.html" class="nav-link">
+  开始使用
+</a></li><li class="dropdown-subitem"><a href="/docs/base/scripts.html" class="nav-link">
+  可执行命令
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/dev/layout.html" class="nav-link">
+  布局
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/router-and-nav.html" class="nav-link">
+  路由和菜单
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/style.html" class="nav-link">
+  主题与样式
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/permission.html" class="nav-link">
+  权限控制
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/advanced/env-var.html" class="nav-link">
+  环境变量
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/code-style.html" class="nav-link">
+  代码规范
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/cdn.html" class="nav-link">
+  使用 CDN 资源
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/deploy.html" class="nav-link">
+  构建和发布
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/other/faq.html" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  版本记录
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Releases
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title nav-link"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          GitHub Pages
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://venus.leoku.top/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://venus.leoku.top/
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础模板
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://codennnn.github.io/venus-starter/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://codennnn.github.io/venus-starter/
+</a></li></ul></li></ul></div></div> <a href="https://github.com/Codennnn/magic-sonic-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+  </a></nav></div> <div class="external-links-search"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a href="/docs/base/introduction" class="dropdown-title nav-link"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          入门
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/base/introduction.html" class="nav-link">
+  介绍
+</a></li><li class="dropdown-subitem"><a href="/docs/base/getting-started.html" class="nav-link">
+  开始使用
+</a></li><li class="dropdown-subitem"><a href="/docs/base/scripts.html" class="nav-link">
+  可执行命令
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/dev/layout.html" class="nav-link">
+  布局
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/router-and-nav.html" class="nav-link">
+  路由和菜单
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/style.html" class="nav-link">
+  主题与样式
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/permission.html" class="nav-link">
+  权限控制
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/advanced/env-var.html" class="nav-link">
+  环境变量
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/code-style.html" class="nav-link">
+  代码规范
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/cdn.html" class="nav-link">
+  使用 CDN 资源
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/deploy.html" class="nav-link">
+  构建和发布
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/other/faq.html" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  版本记录
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Releases
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title nav-link"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          GitHub Pages
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://venus.leoku.top/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://venus.leoku.top/
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础模板
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://codennnn.github.io/venus-starter/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://codennnn.github.io/venus-starter/
+</a></li></ul></li></ul></div></div> <a href="https://github.com/Codennnn/magic-sonic-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+  </a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/base/introduction.html" class="sidebar-link">介绍</a></li><li><a href="/docs/base/getting-started.html" class="sidebar-link">开始使用</a></li><li><a href="/docs/base/scripts.html" class="sidebar-link">可执行命令</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>开发</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/dev/layout.html" class="sidebar-link">布局</a></li><li><a href="/docs/dev/router-and-nav.html" class="sidebar-link">路由和导航</a></li><li><a href="/docs/dev/style.html" class="sidebar-link">主题与样式</a></li><li><a href="/docs/dev/permission.html" class="sidebar-link">权限控制</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/advanced/env-var.html" class="sidebar-link">环境变量</a></li><li><a href="/docs/advanced/code-style.html" class="sidebar-link">代码规范</a></li><li><a href="/docs/advanced/cdn.html" class="sidebar-link">使用 CDN 资源</a></li><li><a href="/docs/advanced/deploy.html" class="sidebar-link">构建和发布</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/other/faq.html" class="sidebar-link">常见问题</a></li><li><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="sidebar-link">版本记录</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1>提炼自企业级中后台产品的交互语言和视觉风格</h1></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">4/3/2021, 9:45:39 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a4d739ee.js" defer></script><script src="/assets/js/4.891e6150.js" defer></script><script src="/assets/js/1.29b96c0a.js" defer></script><script src="/assets/js/32.dbb4b5f6.js" defer></script>
+  </body>
+</html>

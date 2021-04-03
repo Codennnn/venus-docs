@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>网络请求 | Venus</title>
+    <meta name="generator" content="VuePress 1.7.0">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="Venus 是由 Vue.js 驱动的中后台系统模板，凝聚了许多常用功能的具体实现，优秀的设计语言和高质量的代码绝对能让你眼前一亮">
+    
+    <link rel="preload" href="/assets/css/0.styles.9ab0eb92.css" as="style"><link rel="preload" href="/assets/js/app.a4d739ee.js" as="script"><link rel="preload" href="/assets/js/4.891e6150.js" as="script"><link rel="preload" href="/assets/js/1.29b96c0a.js" as="script"><link rel="preload" href="/assets/js/24.bf46ef03.js" as="script"><link rel="prefetch" href="/assets/js/10.cba46770.js"><link rel="prefetch" href="/assets/js/11.ba9f5557.js"><link rel="prefetch" href="/assets/js/12.2c185d74.js"><link rel="prefetch" href="/assets/js/13.a46d4a65.js"><link rel="prefetch" href="/assets/js/14.48e2b9ee.js"><link rel="prefetch" href="/assets/js/15.d110c76b.js"><link rel="prefetch" href="/assets/js/16.d3b57cad.js"><link rel="prefetch" href="/assets/js/17.b0db7a6d.js"><link rel="prefetch" href="/assets/js/18.367bb56b.js"><link rel="prefetch" href="/assets/js/19.a95cf407.js"><link rel="prefetch" href="/assets/js/20.84e7564f.js"><link rel="prefetch" href="/assets/js/21.aceb1967.js"><link rel="prefetch" href="/assets/js/22.b8fc4782.js"><link rel="prefetch" href="/assets/js/23.c0763566.js"><link rel="prefetch" href="/assets/js/25.7682a70f.js"><link rel="prefetch" href="/assets/js/26.8cfe10ad.js"><link rel="prefetch" href="/assets/js/27.6e78096d.js"><link rel="prefetch" href="/assets/js/28.9a57a237.js"><link rel="prefetch" href="/assets/js/29.55442fcc.js"><link rel="prefetch" href="/assets/js/3.a667699b.js"><link rel="prefetch" href="/assets/js/30.e3ff7e81.js"><link rel="prefetch" href="/assets/js/31.5d41ff00.js"><link rel="prefetch" href="/assets/js/32.dbb4b5f6.js"><link rel="prefetch" href="/assets/js/5.170fa327.js"><link rel="prefetch" href="/assets/js/6.d5026ff6.js"><link rel="prefetch" href="/assets/js/7.53406768.js"><link rel="prefetch" href="/assets/js/8.5efbf798.js"><link rel="prefetch" href="/assets/js/9.01a78942.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9ab0eb92.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:currentColor;"><path d="M4 11H16V13H4zM4 6H20V8H4zM4 18L11 18 11.235 18 11.235 16 11 16 4 16z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Venus" class="logo"> <span class="site-name can-hide">Venus</span></a> <div class="links"><nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a href="/docs/base/introduction" class="dropdown-title nav-link router-link-active"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          入门
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/base/introduction.html" class="nav-link">
+  介绍
+</a></li><li class="dropdown-subitem"><a href="/docs/base/getting-started.html" class="nav-link">
+  开始使用
+</a></li><li class="dropdown-subitem"><a href="/docs/base/scripts.html" class="nav-link">
+  可执行命令
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/dev/layout.html" class="nav-link">
+  布局
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/router-and-nav.html" class="nav-link">
+  路由和菜单
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/style.html" class="nav-link">
+  主题与样式
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/permission.html" class="nav-link">
+  权限控制
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/advanced/env-var.html" class="nav-link">
+  环境变量
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/code-style.html" class="nav-link">
+  代码规范
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/cdn.html" class="nav-link">
+  使用 CDN 资源
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/deploy.html" class="nav-link">
+  构建和发布
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/other/faq.html" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  版本记录
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Releases
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title nav-link"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          GitHub Pages
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://venus.leoku.top/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://venus.leoku.top/
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础模板
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://codennnn.github.io/venus-starter/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://codennnn.github.io/venus-starter/
+</a></li></ul></li></ul></div></div> <a href="https://github.com/Codennnn/magic-sonic-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+  </a></nav></div> <div class="external-links-search"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a href="/docs/base/introduction" class="dropdown-title nav-link router-link-active"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Docs</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          入门
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/base/introduction.html" class="nav-link">
+  介绍
+</a></li><li class="dropdown-subitem"><a href="/docs/base/getting-started.html" class="nav-link">
+  开始使用
+</a></li><li class="dropdown-subitem"><a href="/docs/base/scripts.html" class="nav-link">
+  可执行命令
+</a></li></ul></li><li class="dropdown-item"><h4>
+          开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/dev/layout.html" class="nav-link">
+  布局
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/router-and-nav.html" class="nav-link">
+  路由和菜单
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/style.html" class="nav-link">
+  主题与样式
+</a></li><li class="dropdown-subitem"><a href="/docs/dev/permission.html" class="nav-link">
+  权限控制
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/advanced/env-var.html" class="nav-link">
+  环境变量
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/code-style.html" class="nav-link">
+  代码规范
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/cdn.html" class="nav-link">
+  使用 CDN 资源
+</a></li><li class="dropdown-subitem"><a href="/docs/advanced/deploy.html" class="nav-link">
+  构建和发布
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/other/faq.html" class="nav-link">
+  常见问题
+</a></li><li class="dropdown-subitem"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  版本记录
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/" class="nav-link">
+  Blog
+</a></div><div class="nav-item"><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Releases
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title nav-link"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <a class="mobile-dropdown-title"><span class="title">Preview</span> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" stroke-width="20" class="right" style="fill:currentColor;"><path d="M16.939 7.939L12 12.879 7.061 7.939 4.939 10.061 12 17.121 19.061 10.061z"></path></svg></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          GitHub Pages
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://venus.leoku.top/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://venus.leoku.top/
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础模板
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://codennnn.github.io/venus-starter/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  https://codennnn.github.io/venus-starter/
+</a></li></ul></li></ul></div></div> <a href="https://github.com/Codennnn/magic-sonic-docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+  </a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/base/introduction.html" class="sidebar-link">介绍</a></li><li><a href="/docs/base/getting-started.html" class="sidebar-link">开始使用</a></li><li><a href="/docs/base/scripts.html" class="sidebar-link">可执行命令</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>开发</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/dev/layout.html" class="sidebar-link">布局</a></li><li><a href="/docs/dev/router-and-nav.html" class="sidebar-link">路由和导航</a></li><li><a href="/docs/dev/style.html" class="sidebar-link">主题与样式</a></li><li><a href="/docs/dev/permission.html" class="sidebar-link">权限控制</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/advanced/env-var.html" class="sidebar-link">环境变量</a></li><li><a href="/docs/advanced/code-style.html" class="sidebar-link">代码规范</a></li><li><a href="/docs/advanced/cdn.html" class="sidebar-link">使用 CDN 资源</a></li><li><a href="/docs/advanced/deploy.html" class="sidebar-link">构建和发布</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/other/faq.html" class="sidebar-link">常见问题</a></li><li><a href="https://github.com/Codennnn/venus/releases" target="_blank" rel="noopener noreferrer" class="sidebar-link">版本记录</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1>网络请求</h1> <p>受益于 Vue 带来的前端和服务端分离的开发模式，我们可以更加关注如何利用数据来渲染页面。前端只需要编写 API，通过 API 向服务端发起请求来获取数据并展示。做这件事的方法有好几种，而使用基于 promise 的 HTTP 客户端 <a href="https://github.com/axios/axios" target="_blank" rel="noopener noreferrer">axios<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 则是其中非常流行的一种。</p> <h2 id="封装-api"><a href="#封装-api" class="header-anchor">#</a> 封装 API</h2> <p>使用 axios 我们可以很轻松地设置 <code>拦截器</code>、<code>错误处理</code>、<code>超时处理</code> 等功能。为了对接口进行统一的处理，在 <code>@/plugins/axios.js</code> 文件中我们创建了一个唯一的 axios 实例并将其导出。接下来，我们就可以通过引入 axios 实例来创建接口函数，像这样：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// @/api/user.js</span>
+<span class="token keyword">import</span> request <span class="token keyword">from</span> <span class="token string">'@/plugins/axios'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'/user/info'</span><span class="token punctuation">,</span>
+    method<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+    params<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>所有的接口都被放在 <code>@/api</code> 下，按模块进行组织。</p> <p>然后你就可以在 vue 组件中导入 API</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// @/views/User.vue</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getUserInfo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api/user'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="模拟请求"><a href="#模拟请求" class="header-anchor">#</a> 模拟请求</h2> <p>很多时候你不想依赖后端服务来构建你的应用，你可能只想创建自己的模拟数据来加快开发速度，<a href="http://mockjs.com/" target="_blank" rel="noopener noreferrer">
+Mock.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 能帮你做到这点。</p> <p>使用 <code>Mock.js</code> 不需要修改既有的接口，它可以拦截 Ajax 请求，然后返回模拟的响应数据，你只需关注如何创建模拟数据即可。</p> <h3 id="使用方法"><a href="#使用方法" class="header-anchor">#</a> 使用方法</h3> <p>在项目根目录下创建这样的文件： <code>mock/index.js</code>，然后在里面编写配置：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Mock <span class="token keyword">from</span> <span class="token string">'mockjs'</span>
+
+<span class="token comment">// 定义你想拦截的请求接口</span>
+Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'/user/info'</span><span class="token punctuation">,</span> <span class="token string">'get'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token comment">/* 自定义的模拟数据 */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+Mock<span class="token punctuation">.</span><span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>要使其生效，你还需要在 <code>main.js</code> 中导入刚刚写好的配置：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// main.js</span>
+<span class="token keyword">import</span> <span class="token string">'@/mock'</span>
+</code></pre></div><p>更多用法请查阅 <a href="http://mockjs.com/examples.html" target="_blank" rel="noopener noreferrer">Mock.js 示例<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="关闭模拟请求"><a href="#关闭模拟请求" class="header-anchor">#</a> 关闭模拟请求</h3> <p>将 <code>import '@/mock'</code> 移除即可。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">4/3/2021, 9:45:39 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a4d739ee.js" defer></script><script src="/assets/js/4.891e6150.js" defer></script><script src="/assets/js/1.29b96c0a.js" defer></script><script src="/assets/js/24.bf46ef03.js" defer></script>
+  </body>
+</html>
